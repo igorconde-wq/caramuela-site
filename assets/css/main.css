@@ -1232,7 +1232,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
   flex-direction: column;
 }
 .edit::before {
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-edition.png");
+  background-image: url("../images/firula-edition.png");
   content: "";
   width: 1212px;
   height: 506px;
@@ -1952,7 +1952,7 @@ filter: brightness(0) saturate(100%) invert(9%) sepia(12%) saturate(4462%) hue-r
 }
 .arti .firula-arti {
   content: "";
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-arti.png");
+  background-image: url("../images/firula-arti.png");
   width: 714px;
   height: 685px;
   display: flex;
@@ -2070,7 +2070,7 @@ filter: brightness(0) saturate(100%) invert(9%) sepia(12%) saturate(4462%) hue-r
 }
 .arti__box:nth-of-type(1) .arti__box__image .firula::after {
   display: flex;
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-artigo.png);
+  background-image: url(../images/firula-artigo.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -2113,7 +2113,7 @@ filter: brightness(0) saturate(100%) invert(9%) sepia(12%) saturate(4462%) hue-r
 }
 .arti__box:nth-of-type(2) .arti__box__image .firula::after {
   display: flex;
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-artigo.png);
+  background-image: url(../images/firula-artigo.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -2157,7 +2157,7 @@ filter: brightness(0) saturate(100%) invert(9%) sepia(12%) saturate(4462%) hue-r
 }
 .arti__box:nth-of-type(3) .arti__box__image .firula::after {
   display: flex;
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-artigo.png);
+  background-image: url(../images/firula-artigo.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -2204,7 +2204,7 @@ filter: brightness(0) saturate(100%) invert(9%) sepia(12%) saturate(4462%) hue-r
 }
 .arti__box:nth-of-type(4) .arti__box__image .firula::after {
   display: flex;
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-artigo.png);
+  background-image: url(../images/firula-artigo.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -2331,7 +2331,7 @@ filter: brightness(0) saturate(100%) invert(9%) sepia(12%) saturate(4462%) hue-r
   content: "";
   width: 95%;
   height: 538px;
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-emph.png);
+  background-image: url(../images/firula-emph.png);
   position: fixed;
   bottom: 0;
   display: flex;
@@ -2964,7 +2964,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(0%) hue-rot
 }
 .cont::before {
   content: "";
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-contact.png");
+  background-image: url("../images/firula-contact.png");
   width: 477px;
   height: 1061px;
   z-index: 100;
@@ -3245,7 +3245,7 @@ color: #0b2859;
 }
 .part::before {
   content: "";
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-participacao.png);
+  background-image: url(../images/firula-participacao.png);
   width: 477px;
   height: 1061px;
   z-index: 100;
@@ -3661,7 +3661,7 @@ color: #0b2859;
 }
 .awnt__history::before {
   content: "";
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-awnt1.png");
+  background-image: url("../images/firula-awnt1.png");
   width: 477px;
   height: 1061px;
   z-index: 100;
@@ -3858,7 +3858,7 @@ filter: brightness(0) saturate(100%) invert(15%) sepia(98%) saturate(925%) hue-r
 }
 .awnt__creator::before {
   content: "";
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-awnt2.png");
+  background-image: url("../images/firula-awnt2.png");
   width: 381px;
   height: 848px;
   z-index: 100;
@@ -3944,7 +3944,7 @@ filter: brightness(0) saturate(100%) invert(15%) sepia(98%) saturate(925%) hue-r
 }
 .awnt__advice::before {
   content: "";
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-cont3.png");
+  background-image: url("../images/firula-cont3.png");
   width: 295px;
   height: 808px;
   z-index: 100;
@@ -4706,7 +4706,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
   top: -82px;
   width: 64px;
   height: 62px;
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-box-premiado.png");
+  background-image: url("../images/firula-box-premiado.png");
 }
 .awar__box__description__award__title {
   color: #ffffff;
@@ -4778,7 +4778,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
   position: relative;
 }
 .awin::before {
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-homenagem.png");
+  background-image: url("../images/firula-homenagem.png");
   content: "";
   position: fixed;
   left: 0;
@@ -5096,7 +5096,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
   top: -102px;
   width: 90.49px;
   height: 88.02px;
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-box-homenageado.png");
+  background-image: url("../images/firula-box-homenageado.png");
 }
 .hono__box__description__award__title {
   font: 1.875rem "BTG Pactual Sans", sans-serif, arial;
@@ -5150,7 +5150,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
   position: relative;
 }
 .hoin::before {
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-homenagem.png");
+  background-image: url("../images/firula-homenagem.png");
   content: "";
   position: fixed;
   left: 0;
@@ -5332,7 +5332,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
 }
 .gall::after {
   content: "";
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-gallery.png);
+  background-image: url(../images/firula-gallery.png);
   width: 654px;
   height: 1330px;
   position: absolute;
@@ -5622,7 +5622,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
 }
 .gain::after {
   content: "";
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-gallery.png);
+  background-image: url(../images/firula-gallery.png);
   width: 654px;
   height: 1330px;
   position: absolute;
@@ -5927,7 +5927,7 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
 }
 .foot .foot--circle{
   content: "";
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-footer.png);
+  background-image: url(../images/firula-footer.png);
   display: flex;
   position: absolute;
   bottom: 0;
