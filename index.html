@@ -552,6 +552,181 @@
         width: 48% !important;
       }
       
+      /* Seção Apresentação (O Caramuela) no Mobile: As 4 fotos dentro da tela em grid 2x2 sem rolagem lateral */
+      #presentation {
+        padding: 40px 0 50px 0 !important;
+        overflow-x: hidden !important;
+        width: 100% !important;
+      }
+      #presentation .row--prese {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 20px 16px !important;
+        margin: 0 auto !important;
+      }
+      #presentation .prese__ld1,
+      #presentation .prese__ld1.animate {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding: 0 16px !important;
+        text-align: center !important;
+        margin: 0 auto 35px auto !important;
+        position: relative !important;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+      }
+      .prese__ld1__title {
+        font-size: 1.85rem !important;
+        text-align: center !important;
+      }
+      .prese__ld1__subtitle {
+        font-size: 1.25rem !important;
+        text-align: center !important;
+        margin: 0 auto 15px !important;
+      }
+      .prese__ld1__paragraph {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+      }
+      .prese__ld1__paragraph p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+      }
+      #presentation .prese__ld2,
+      #presentation .prese__ld2.animate {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        display: block !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        position: relative !important;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+      }
+      .carrossel-presetation,
+      .carrossel-presetation.owl-carousel {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px 10px !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        overflow: visible !important;
+      }
+      .carrossel-presetation .owl-stage-outer {
+        overflow: visible !important;
+        width: 100% !important;
+      }
+      .carrossel-presetation .owl-stage {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px 10px !important;
+        width: 100% !important;
+        transform: none !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+      }
+      .carrossel-presetation .owl-item {
+        width: 100% !important;
+        margin: 0 !important;
+        float: none !important;
+        display: flex !important;
+        justify-content: center !important;
+      }
+      .carrossel-presetation .owl-nav,
+      .carrossel-presetation .owl-dots {
+        display: none !important;
+      }
+      .prese__ld2__item,
+      .prese__ld2__item:nth-of-type(even),
+      .prese__ld2__item:nth-of-type(odd),
+      .prese__ld2__item:nth-of-type(even).animate,
+      .prese__ld2__item:nth-of-type(odd).animate,
+      .carrossel-presetation .owl-item:nth-of-type(even) .prese__ld2__item {
+        width: 100% !important;
+        max-width: 160px !important;
+        opacity: 1 !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: 0 !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .prese__ld2__item__content {
+        width: 140px !important;
+        height: 140px !important;
+        position: relative !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .prese__ld2__item__content__image,
+      .carrossel-presetation .owl-item:nth-of-type(even) .prese__ld2__item__content__image {
+        width: 124px !important;
+        height: 124px !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+        position: relative !important;
+        margin: 0 !important;
+      }
+      .prese__ld2__item__content__image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+      }
+      .prese__ld2__item__content .svgs--prese {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 140px !important;
+        height: 140px !important;
+        pointer-events: none !important;
+        z-index: 2 !important;
+      }
+      .prese__ld2__item__content .svgs--prese .border-padron {
+        width: 140px !important;
+        height: 140px !important;
+        display: block !important;
+      }
+      .prese__ld2__item__content .svgs--prese .mustache {
+        width: 68px !important;
+        height: 10px !important;
+        bottom: 6px !important;
+        left: 50% !important;
+        transform: translate(-50%, 0) !important;
+        position: absolute !important;
+      }
+      .prese__ld2__item__description {
+        margin-top: 10px !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+      }
+      .prese__ld2__item__description__title {
+        font-size: 0.88rem !important;
+        font-weight: 700 !important;
+        color: #23221C !important;
+        text-align: center !important;
+        line-height: 1.25 !important;
+        margin: 0 auto !important;
+      }
+      
       /* Imagens e mídias 100% fluidas */
       img, video, iframe, svg, table {
         max-width: 100% !important;
