@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CARAMUELA - Design Inspirado em www.premiodamusica.com.br
+   CARAMUELA - Design Inspirado em caramuela.com.br
    Estilo Editorial, Alta Autoridade Institucional, Mobile-First
    ========================================================================== */
 
@@ -9,7 +9,7 @@
   --bg-surface-elevated: #1e1e24;
   --bg-card: #18181e;
   
-  --color-gold: #c89b3c;       /* Dourado institucional nobre (estilo PMB) */
+  --color-gold: #c89b3c;       /* Dourado institucional nobre (estilo Caramuela) */
   --color-gold-light: #dfb76c;
   --color-gold-dark: #8c671a;
   
@@ -55,7 +55,7 @@ body {
 }
 
 /* ==========================================================================
-   HEADER & NAVEGAÇÃO ESTILO PMB (Com Sidebar Mobile)
+   HEADER & NAVEGAÇÃO ESTILO Caramuela (Com Sidebar Mobile)
    ========================================================================== */
 
 .top-bar {
@@ -105,7 +105,7 @@ body {
   padding: 0 1.25rem;
 }
 
-.brand-pmb {
+.brand-caramuela {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -179,7 +179,7 @@ body {
   gap: 0.75rem;
 }
 
-.btn-pmb-gold {
+.btn-caramuela-gold {
   background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
   color: #000;
   font-weight: 800;
@@ -197,12 +197,12 @@ body {
   gap: 0.4rem;
 }
 
-.btn-pmb-gold:hover {
+.btn-caramuela-gold:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 18px rgba(200, 155, 60, 0.4);
 }
 
-.btn-pmb-outline {
+.btn-caramuela-outline {
   background: transparent;
   color: var(--color-white);
   font-weight: 700;
@@ -217,7 +217,7 @@ body {
   cursor: pointer;
 }
 
-.btn-pmb-outline:hover {
+.btn-caramuela-outline:hover {
   border-color: var(--color-gold);
   color: var(--color-gold);
 }
@@ -235,7 +235,7 @@ body {
 }
 
 /* ==========================================================================
-   OFF-CANVAS SIDEBAR (Estilo www.premiodamusica.com.br)
+   OFF-CANVAS SIDEBAR (Estilo caramuela.com.br)
    ========================================================================== */
 
 .sidebar-overlay {
@@ -355,7 +355,7 @@ body {
 }
 
 /* ==========================================================================
-   ESTRUTURA DE SEÇÕES EDITORIAIS (PMB)
+   ESTRUTURA DE SEÇÕES EDITORIAIS (Caramuela)
    ========================================================================== */
 
 .container {
@@ -364,12 +364,12 @@ body {
   padding: 0 1.25rem;
 }
 
-.section-pmb {
+.section-caramuela {
   padding: 5rem 0;
   border-bottom: 1px solid var(--color-border);
 }
 
-.section-header-pmb {
+.section-header-caramuela {
   margin-bottom: 3rem;
 }
 
@@ -383,7 +383,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.section-title-pmb {
+.section-title-caramuela {
   font-family: var(--font-title);
   font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 900;
@@ -392,7 +392,7 @@ body {
   color: var(--color-white);
 }
 
-.section-desc-pmb {
+.section-desc-caramuela {
   font-size: 1.05rem;
   color: var(--color-text-body);
   max-width: 680px;
@@ -401,17 +401,17 @@ body {
 }
 
 /* ==========================================================================
-   HERO INSTITUCIONAL EDITORIAL (Estilo PMB)
+   HERO INSTITUCIONAL EDITORIAL (Caramuela)
    ========================================================================== */
 
-.hero-pmb {
+.hero-caramuela {
   padding: 4.5rem 0 3.5rem;
   position: relative;
   background: radial-gradient(circle at 80% 20%, rgba(200, 155, 60, 0.08) 0%, transparent 60%);
   border-bottom: 1px solid var(--color-border);
 }
 
-.hero-pmb-grid {
+.hero-caramuela-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 3.5rem;
@@ -448,7 +448,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.hero-actions-pmb {
+.hero-actions-caramuela {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -491,28 +491,28 @@ body {
 }
 
 /* ==========================================================================
-   CARROSSEL DE NÚMEROS E RECONHECIMENTO (Estilo PMB: Maria Bethânia, etc)
+   CARROSSEL DE NÚMEROS E RECONHECIMENTO (Estilo Caramuela: Maria Bethânia, etc)
    ========================================================================== */
 
-.stats-pmb-strip {
+.stats-caramuela-strip {
   background: var(--bg-surface);
   border-bottom: 1px solid var(--color-border);
   padding: 2rem 0;
 }
 
-.stats-pmb-grid {
+.stats-caramuela-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
-.stat-pmb-card {
+.stat-caramuela-card {
   padding: 1.25rem 1.5rem;
   border-left: 2px solid var(--color-gold);
   background: rgba(255, 255, 255, 0.02);
 }
 
-.stat-pmb-number {
+.stat-caramuela-number {
   font-family: var(--font-title);
   font-size: 2.5rem;
   font-weight: 900;
@@ -521,7 +521,7 @@ body {
   margin-bottom: 0.35rem;
 }
 
-.stat-pmb-title {
+.stat-caramuela-title {
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -529,14 +529,14 @@ body {
   color: var(--color-white);
 }
 
-.stat-pmb-desc {
+.stat-caramuela-desc {
   font-size: 0.75rem;
   color: var(--color-text-muted);
   margin-top: 0.25rem;
 }
 
 /* ==========================================================================
-   SEÇÃO DE MANIFESTO & VÍDEO (Estilo PMB "Assista ao Manifesto!")
+   SEÇÃO DE MANIFESTO & VÍDEO (Estilo Caramuela "Assista ao Manifesto!")
    ========================================================================== */
 
 .manifesto-box {
@@ -615,7 +615,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.tab-btn-pmb {
+.tab-btn-caramuela {
   background: transparent;
   border: 1px solid var(--color-border);
   color: var(--color-text-body);
@@ -631,12 +631,12 @@ body {
   transition: all var(--transition);
 }
 
-.tab-btn-pmb:hover {
+.tab-btn-caramuela:hover {
   border-color: var(--color-gold);
   color: #fff;
 }
 
-.tab-btn-pmb.active {
+.tab-btn-caramuela.active {
   background: var(--color-gold);
   color: #000;
   border-color: var(--color-gold);
@@ -649,7 +649,7 @@ body {
   gap: 2rem;
 }
 
-.card-oficina-pmb {
+.card-oficina-caramuela {
   background: var(--bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xs);
@@ -659,7 +659,7 @@ body {
   position: relative;
 }
 
-.card-oficina-pmb:hover {
+.card-oficina-caramuela:hover {
   border-color: var(--color-gold);
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
@@ -738,10 +738,10 @@ body {
 }
 
 /* ==========================================================================
-   AGENDA DE SHOWS & LINHA DO TEMPO (Estilo PMB)
+   AGENDA DE SHOWS & LINHA DO TEMPO (Caramuela)
    ========================================================================== */
 
-.timeline-pmb {
+.timeline-caramuela {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -799,16 +799,16 @@ body {
 }
 
 /* ==========================================================================
-   CLIPPING & NOTÍCIAS (Estilo PMB Notícias)
+   CLIPPING & NOTÍCIAS (Estilo Caramuela Notícias)
    ========================================================================== */
 
-.news-grid-pmb {
+.news-grid-caramuela {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-.news-card-pmb {
+.news-card-caramuela {
   background: var(--bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xs);
@@ -818,7 +818,7 @@ body {
   transition: all var(--transition);
 }
 
-.news-card-pmb:hover {
+.news-card-caramuela:hover {
   border-color: var(--color-gold);
   transform: translateY(-3px);
 }
@@ -849,10 +849,10 @@ body {
 }
 
 /* ==========================================================================
-   FOOTER INSTITUCIONAL (Estilo PMB)
+   FOOTER INSTITUCIONAL (Caramuela)
    ========================================================================== */
 
-.footer-pmb {
+.footer-caramuela {
   background: #000;
   border-top: 1px solid var(--color-border);
   padding: 4rem 0 2rem;
@@ -932,11 +932,11 @@ body {
   .menu-trigger-mobile {
     display: block;
   }
-  .hero-pmb-grid {
+  .hero-caramuela-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  .stats-pmb-grid {
+  .stats-caramuela-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .manifesto-box {
@@ -960,11 +960,11 @@ body {
     display: none; /* Simplifica o topo no celular */
   }
 
-  .section-pmb {
+  .section-caramuela {
     padding: 3.5rem 0;
   }
 
-  .hero-pmb {
+  .hero-caramuela {
     padding: 2.5rem 0 2rem;
   }
 
@@ -972,16 +972,16 @@ body {
     font-size: 2.2rem;
   }
 
-  .stats-pmb-grid {
+  .stats-caramuela-grid {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 
-  .stat-pmb-card {
+  .stat-caramuela-card {
     padding: 1rem;
   }
 
-  .stat-pmb-number {
+  .stat-caramuela-number {
     font-size: 2rem;
   }
 
@@ -1010,13 +1010,13 @@ body {
     text-align: center;
   }
 
-  .btn-pmb-gold, .btn-pmb-outline {
+  .btn-caramuela-gold, .btn-caramuela-outline {
     width: 100%;
     justify-content: center;
     padding: 0.85rem 1rem;
   }
 
-  .hero-actions-pmb {
+  .hero-actions-caramuela {
     flex-direction: column;
     width: 100%;
   }
