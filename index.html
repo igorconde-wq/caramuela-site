@@ -70,8 +70,8 @@
       position: relative !important;
     }
     
-    /* Ocultar e remover patrocinadores e firula do rodapé */
-    #marca, .marca-desk, .marca-mobo, .foot--circle, .foot__partner, .cred__logo {
+    /* Ocultar e remover patrocinadores externos */
+    #marca, .marca-desk, .marca-mobo, .foot__partner, .cred__logo {
       display: none !important;
       visibility: hidden !important;
       height: 0 !important;
@@ -80,6 +80,42 @@
       overflow: hidden !important;
       margin: 0 !important;
       padding: 0 !important;
+    }
+    
+    /* Gavinhas da Logo do Caramuela nos elementos decorativos */
+    .foot .foot--circle {
+      display: flex !important;
+      visibility: visible !important;
+      background-image: url('assets/images/firula-footer.png') !important;
+      background-position: center bottom !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      opacity: 0.95 !important;
+      pointer-events: none;
+    }
+    .sidebar--circle {
+      background-image: url('assets/images/firula-sidebar.png') !important;
+      background-position: right bottom !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      opacity: 0.9 !important;
+      pointer-events: none;
+    }
+    .firula-arti, .arti .firula-arti {
+      background-image: url('assets/images/firula-arti.png') !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      opacity: 0.85 !important;
+      pointer-events: none;
+    }
+    .emph-firula, .emph .emph-firula {
+      background-image: url('assets/images/firula-emph.png') !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      opacity: 0.75 !important;
+      pointer-events: none;
     }
     
     /* Topo / Header - Espaçamento do topo e alinhamento */
@@ -444,7 +480,7 @@
         </div>
    </section>
    <section id="emphasis" class="emph animateSet">
-        <span class="emph-firula" style="background-image: url(https://www.premiodamusica.com.br/assets/images/firula-emph.png);"></span>
+        <span class="emph-firula" style="background-image: url(assets/images/firula-emph.png);"></span>
                 <div class="container  container--emph">
             <div class="emph__encompass encompass boxAnimate">
                 <h2 class="emph__encompass__title title"></h2>
@@ -571,7 +607,7 @@
     
 
        <section id="articles" class="arti animateSet">
-        <div class="firula-arti boxAnimate" style="background-image:url('https://www.premiodamusica.com.br/assets/images/firula-arti.png');"></div>
+        <div class="firula-arti boxAnimate" style="background-image:url('assets/images/firula-arti.png');"></div>
         <div class="container container--arti">
             <div class="arti__content">
                                 <article class="arti__box position-relative boxAnimate">
@@ -745,7 +781,7 @@
    <!-- Fim-news -->
 </main>
 <footer id="footer" class="foot animateSet">
-    
+    <div class="foot--circle boxAnimate"></div>
     <div class="container container-foot">
         <div class="row">
             <div class="foot__content text-center">
