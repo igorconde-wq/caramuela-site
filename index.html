@@ -267,13 +267,13 @@
       max-width: 100vw !important;
     }
     .emph-firula, .emph .emph-firula {
-      background-image: url('assets/images/firula-emph.png') !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-size: contain !important;
-      opacity: 0.75 !important;
+      display: none !important;
+      visibility: hidden !important;
+      width: 0 !important;
+      height: 0 !important;
+      background: none !important;
+      opacity: 0 !important;
       pointer-events: none !important;
-      max-width: 100vw !important;
     }
     
     /* Topo / Header - Espaçamento do topo e alinhamento */
@@ -411,11 +411,12 @@
         transform: translate(-50%, -50%) !important;
       }
       .emph .emph-firula {
-        width: 100% !important;
-        max-width: 100vw !important;
-        height: 180px !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        background: none !important;
+        opacity: 0 !important;
       }
       
       /* Espaço superior no mobile */
@@ -998,7 +999,7 @@
         </div>
    </section>
    <section id="emphasis" class="emph animateSet">
-        <span class="emph-firula" style="background-image: url(assets/images/firula-emph.png);"></span>
+        
                 <div class="container  container--emph">
             <div class="emph__encompass encompass boxAnimate">
                 <h2 class="emph__encompass__title title"></h2>
