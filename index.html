@@ -645,7 +645,7 @@
         display: none !important;
       }
 
-      /* Base do item: fotos maiores (176px) e animacao de entrada com transicao suave ao rolar */
+      /* Base do item: fotos maiores (176px) e animacao vindo de fora pelas laterais */
       .prese__ld2__item {
         width: 180px !important;
         max-width: 52% !important;
@@ -657,22 +657,20 @@
         right: 0 !important;
         top: 0 !important;
         opacity: 0 !important;
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease-out !important;
         will-change: transform, opacity;
       }
 
       /* Disposicao em ZIG-ZAG:
-         Item 1: Esquerda (entra deslizando da esquerda e escalando)
-         Item 2: Um pouco abaixo mais a direita (entra deslizando da direita)
-         Item 3: Mais abaixo a esquerda (entra deslizando da esquerda)
-         Item 4: Mais abaixo a direita (entra deslizando da direita)
+         Item 1 e 3: Comecam fora da tela a esquerda (-100vw)
+         Item 2 e 4: Comecam fora da tela a direita (100vw)
       */
       .prese__ld2__item:nth-of-type(odd),
       .carrossel-presetation .owl-item:nth-of-type(odd) .prese__ld2__item {
         align-self: flex-start !important;
         margin-left: 8px !important;
         margin-right: auto !important;
-        transform: translate3d(-50px, 25px, 0) scale(0.82) !important;
+        transform: translate3d(-100vw, 0, 0) !important;
         z-index: 2 !important;
       }
 
@@ -681,7 +679,7 @@
         align-self: flex-end !important;
         margin-left: auto !important;
         margin-right: 8px !important;
-        transform: translate3d(50px, 25px, 0) scale(0.82) !important;
+        transform: translate3d(100vw, 0, 0) !important;
         z-index: 3 !important;
       }
 
@@ -691,13 +689,13 @@
         margin-top: -30px !important;
       }
 
-      /* Movimentacao ativa ao rolar a pagina (classe .animate ativada pelo animate.js) */
+      /* Movimentacao ativa ao rolar a pagina para baixo: desliza da lateral para a posicao final */
       .prese__ld2__item.animate,
       .prese__ld2__item:nth-of-type(odd).animate,
       .prese__ld2__item:nth-of-type(even).animate,
       .carrossel-presetation .owl-item .prese__ld2__item.animate {
         opacity: 1 !important;
-        transform: translate3d(0, 0, 0) scale(1) !important;
+        transform: translate3d(0, 0, 0) !important;
       }
 
       /* Conteudo circular maior (176px) */
@@ -1425,39 +1423,53 @@
         }
       }, { passive: true });
 
-      // Animação individual de cada foto ao entrar na tela com a rolagem
-      var presItems = document.querySelectorAll('.carrossel-presetation .prese__ld2__item');
-      if (presItems.length) {
-        if ('IntersectionObserver' in window) {
-          var presObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                presObserver.unobserve(entry.target);
-              }
-            });
-          }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
-          });
+      // Animação das 4 fotos: surgem vindo de fora pelas laterais, apenas ao rolar para baixo e uma de cada vez
+      (function() {
+        var items = document.querySelectorAll('.carrossel-presetation .prese__ld2__item');
+        if (!items.length) return;
 
-          presItems.forEach(function(item) {
-            presObserver.observe(item);
-          });
-        } else {
-          function checkPresScroll() {
-            var scrollBottom = $(window).scrollTop() + $(window).height();
-            presItems.forEach(function(el) {
-              if (scrollBottom > $(el).offset().top + 50) {
-                $(el).addClass('animate');
+        var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var isQueueRunning = false;
+
+        function checkPhotosOnScrollDown() {
+          var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+          var scrollingDown = currentScroll > lastScrollTop;
+          lastScrollTop = currentScroll;
+
+          // Apenas ativa quando o usuário estiver rolando ativamente para baixo
+          if (!scrollingDown) return;
+
+          var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+          // Entra quando a foto atingir a linha de ativação na parte visível da tela (80% da tela)
+          var triggerLine = windowHeight * 0.82;
+
+          for (var i = 0; i < items.length; i++) {
+            var el = items[i];
+            if (!el.classList.contains('animate')) {
+              var rect = el.getBoundingClientRect();
+              if (rect.top <= triggerLine && rect.bottom >= 0) {
+                if (isQueueRunning) return;
+                
+                // Dispara a foto
+                el.classList.add('animate');
+                isQueueRunning = true;
+
+                // Garante que a próxima foto só entre 480ms depois (uma foto de cada vez)
+                setTimeout(function() {
+                  isQueueRunning = false;
+                  checkPhotosOnScrollDown();
+                }, 480);
+
+                break; // Dispara rigorosamente apenas uma foto por vez!
               }
-            });
+            }
           }
-          $(window).on('scroll resize', checkPresScroll);
-          checkPresScroll();
         }
 
-        // Suporte para tela desktop quando a seção estiver visível
+        window.addEventListener('scroll', checkPhotosOnScrollDown, { passive: true });
+        window.addEventListener('touchmove', checkPhotosOnScrollDown, { passive: true });
+
+        // Suporte desktop para telas largas
         if (window.innerWidth >= 992) {
           $(window).on('scroll', function() {
             if ($('#presentation').hasClass('animate')) {
@@ -1465,7 +1477,7 @@
             }
           });
         }
-      }
+      })();
     });
   </script>
 </body>
