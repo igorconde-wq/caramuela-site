@@ -443,263 +443,111 @@ filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-r
 
 
 
+/* Fallback font declarations to eliminate 404 network requests */
 @font-face {
   font-family: 'BTG Pactual Sans';
-  src: url('../assets/css/btg/BTGSans-HL.eot');
-  src: url('../assets/css/btg/BTGSans-HL.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/btg/BTGSans-HL.woff2') format('woff2'),
-      url('../assets/css/btg/BTGSans-HL.woff') format('woff'),
-      url('../assets/css/btg/BTGSans-HL.ttf') format('truetype'),
-      url('../assets/css/btg/BTGSans-HL.svg#BTGSans-HL') format('svg');
-  font-weight: 100;
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
-
-
 @font-face {
-  font-family: 'BTG Pactual Sans';
-  src: url('../assets/css/btg/BTGSans-Rg.eot');
-  src: url('../assets/css/btg/BTGSans-Rg.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/btg/BTGSans-Rg.woff2') format('woff2'),
-      url('../assets/css/btg/BTGSans-Rg.woff') format('woff'),
-      url('../assets/css/btg/BTGSans-Rg.ttf') format('truetype'),
-      url('../assets/css/btg/BTGSans-Rg.svg#BTGSans-Rg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'BTG Pactual Sans';
-  src: url('../assets/css/btg/BTGSans-Sb.eot');
-  src: url('../assets/css/btg/BTGSans-Sb.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/btg/BTGSans-Sb.woff2') format('woff2'),
-      url('../assets/css/btg/BTGSans-Sb.woff') format('woff'),
-      url('../assets/css/btg/BTGSans-Sb.ttf') format('truetype'),
-      url('../assets/css/btg/BTGSans-Sb.svg#BTGSans-Sb') format('svg');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'BTG Pactual Sans';
-  src: url('../assets/css/btg/BTGSans-Th.eot');
-  src: url('../assets/css/btg/BTGSans-Th.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/btg/BTGSans-Th.woff2') format('woff2'),
-      url('../assets/css/btg/BTGSans-Th.woff') format('woff'),
-      url('../assets/css/btg/BTGSans-Th.ttf') format('truetype'),
-      url('../assets/css/btg/BTGSans-Th.svg#BTGSans-Th') format('svg');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'BTG Pactual Sans';
-  src: url('../assets/css/btg/BTGSans-Blk.eot');
-  src: url('../assets/css/btg/BTGSans-Blk.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/btg/BTGSans-Blk.woff2') format('woff2'),
-      url('../assets/css/btg/BTGSans-Blk.woff') format('woff'),
-      url('../assets/css/btg/BTGSans-Blk.ttf') format('truetype'),
-      url('../assets/css/btg/BTGSans-Blk.svg#BTGSans-Blk') format('svg');
+  font-family: 'BTGSans-Blk';
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
-
-
 @font-face {
-  font-family: 'BTG Pactual Sans';
-  src: url('../assets/css/btg/BTGSans-Bd.eot');
-  src: url('../assets/css/btg/BTGSans-Bd.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/btg/BTGSans-Bd.woff2') format('woff2'),
-      url('../assets/css/btg/BTGSans-Bd.woff') format('woff'),
-      url('../assets/css/btg/BTGSans-Bd.ttf') format('truetype'),
-      url('../assets/css/btg/BTGSans-Bd.svg#BTGSans-Bd') format('svg');
-  font-weight: bold;
+  font-family: 'BTGSans-HL';
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
-
-@font-face {
-  font-family: 'BTG Pactual Sans';
-  src: url('../assets/css/btg/BTGSans-XBd.eot');
-  src: url('../assets/css/btg/BTGSans-XBd.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/btg/BTGSans-XBd.woff2') format('woff2'),
-      url('../assets/css/btg/BTGSans-XBd.woff') format('woff'),
-      url('../assets/css/btg/BTGSans-XBd.ttf') format('truetype'),
-      url('../assets/css/btg/BTGSans-XBd.svg#BTGSans-XBd') format('svg');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'BTG Pactual Sans';
-  src: url('../assets/css/btg/BTGSans-Blk-It.eot');
-  src: url('../assets/css/btg/BTGSans-Blk-It.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/btg/BTGSans-Blk-It.woff2') format('woff2'),
-      url('../assets/css/btg/BTGSans-Blk-It.woff') format('woff'),
-      url('../assets/css/btg/BTGSans-Blk-It.ttf') format('truetype'),
-      url('../assets/css/btg/BTGSans-Blk-It.svg#BTGSans-Blk-It') format('svg');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-
-
 @font-face {
   font-family: 'NokaTrial-Bold';
-  src: url('../assets/css/NokaTrial-Bold.eot');
-  src: url('../assets/css/NokaTrial-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/NokaTrial-Bold.woff2') format('woff2'),
-      url('../assets/css/NokaTrial-Bold.woff') format('woff'),
-      url('../assets/css/NokaTrial-Bold.ttf') format('truetype'),
-      url('../assets/css/NokaTrial-Bold.svg#NokaTrial-Bold') format('svg');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'NokaTrial-Black';
-  src: url('../assets/css/NokaTrial-Black.eot');
-  src: url('../assets/css/NokaTrial-Black.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/NokaTrial-Black.woff2') format('woff2'),
-      url('../assets/css/NokaTrial-Black.woff') format('woff'),
-      url('../assets/css/NokaTrial-Black.ttf') format('truetype'),
-      url('../assets/css/NokaTrial-Black.svg#NokaTrial-Black') format('svg');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'NokaTrial-Hairline';
-  src: url('../assets/css/NokaTrial-Hairline.eot');
-  src: url('../assets/css/NokaTrial-Hairline.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/NokaTrial-Hairline.woff2') format('woff2'),
-      url('../assets/css/NokaTrial-Hairline.woff') format('woff'),
-      url('../assets/css/NokaTrial-Hairline.ttf') format('truetype'),
-      url('../assets/css/NokaTrial-Hairline.svg#NokaTrial-Hairline') format('svg');
-  font-weight: normal;
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'NokaTrial-Semibold';
-  src: url('./fontes/noka/NokaTrial-Semibold.eot');
-  src: url('./fontes/noka/NokaTrial-Semibold.eot?#iefix') format('embedded-opentype'),
-      url('./fontes/noka/NokaTrial-Semibold.woff2') format('woff2'),
-      url('./fontes/noka/NokaTrial-Semibold.woff') format('woff'),
-      url('./fontes/noka/NokaTrial-Semibold.ttf') format('truetype'),
-      url('./fontes/noka/NokaTrial-Semibold.svg#NokaTrial-Semibold') format('svg');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'NokaTrial-Medium';
-  src: url('../assets/css/NokaTrial-Medium.eot');
-  src: url('../assets/css/NokaTrial-Medium.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/NokaTrial-Medium.woff2') format('woff2'),
-      url('../assets/css/NokaTrial-Medium.woff') format('woff'),
-      url('../assets/css/NokaTrial-Medium.ttf') format('truetype'),
-      url('../assets/css/NokaTrial-Medium.svg#NokaTrial-Medium') format('svg');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'NokaTrial-Light';
-  src: url('../assets/css/NokaTrial-Light.eot');
-  src: url('../assets/css/NokaTrial-Light.eot?#iefix') format('embedded-opentype'),
-      url('../assets/css/NokaTrial-Light.woff2') format('woff2'),
-      url('../assets/css/NokaTrial-Light.woff') format('woff'),
-      url('../assets/css/NokaTrial-Light.ttf') format('truetype'),
-      url('../assets/css/NokaTrial-Light.svg#NokaTrial-Light') format('svg');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
-
-
 @font-face {
   font-family: 'NeuzeitGroExtExtra-condensed-Black';
-  src: url('NeuzeitGroExt-Bla.eot');
-  src: local('Neuzeit Grotesk Extra-condensed Black'), local('NeuzeitGroExt-Bla'),
-      url('NeuzeitGroExt-Bla.eot?#iefix') format('embedded-opentype'),
-      url('NeuzeitGroExt-Bla.woff2') format('woff2'),
-      url('NeuzeitGroExt-Bla.woff') format('woff'),
-      url('NeuzeitGroExt-Bla.ttf') format('truetype');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   font-family: 'NeuzeitGro-Black';
-  src: url('NeuzeitGro-Bla.eot');
-  src: local('Neuzeit Grotesk Black'), local('NeuzeitGro-Bla'),
-      url('NeuzeitGro-Bla.eot?#iefix') format('embedded-opentype'),
-      url('NeuzeitGro-Bla.woff2') format('woff2'),
-      url('NeuzeitGro-Bla.woff') format('woff'),
-      url('NeuzeitGro-Bla.ttf') format('truetype');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   font-family: 'NeuzeitGro-Regular';
-  src: url('NeuzeitGro-Reg.eot');
-  src: local('Neuzeit Grotesk Regular'), local('NeuzeitGro-Reg'),
-      url('NeuzeitGro-Reg.eot?#iefix') format('embedded-opentype'),
-      url('NeuzeitGro-Reg.woff2') format('woff2'),
-      url('NeuzeitGro-Reg.woff') format('woff'),
-      url('NeuzeitGro-Reg.ttf') format('truetype');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   font-family: 'NeuzeitGro-Light';
-  src: url('NeuzeitGro-Lig.eot');
-  src: local('Neuzeit Grotesk Light'), local('NeuzeitGro-Lig'),
-      url('NeuzeitGro-Lig.eot?#iefix') format('embedded-opentype'),
-      url('NeuzeitGro-Lig.woff2') format('woff2'),
-      url('NeuzeitGro-Lig.woff') format('woff'),
-      url('NeuzeitGro-Lig.ttf') format('truetype');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   font-family: 'NeuzeitGro-Bold';
-  src: url('./fontes/neuzeit-grotesk/NeuzeitGro-Bol.eot');
-  src: local('./fontes/neuzeit-grotesk/Neuzeit Grotesk Bold'), local('NeuzeitGro-Bol'),
-      url('./fontes/neuzeit-grotesk/NeuzeitGro-Bol.eot?#iefix') format('embedded-opentype'),
-      url('./fontes/neuzeit-grotesk/NeuzeitGro-Bol.woff2') format('woff2'),
-      url('./fontes/neuzeit-grotesk/NeuzeitGro-Bol.woff') format('woff'),
-      url('./fontes/neuzeit-grotesk/NeuzeitGro-Bol.ttf') format('truetype');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   font-family: 'NeuzeitGroCon-Black-Condensed';
-  src: url('NeuzeitGroCon-Bla.eot');
-  src: local('Neuzeit Grotesk Condensed Black'), local('NeuzeitGroCon-Bla'),
-      url('NeuzeitGroCon-Bla.eot?#iefix') format('embedded-opentype'),
-      url('NeuzeitGroCon-Bla.woff2') format('woff2'),
-      url('NeuzeitGroCon-Bla.woff') format('woff'),
-      url('NeuzeitGroCon-Bla.ttf') format('truetype');
+  src: local('Montserrat'), local('Helvetica Neue'), local('Arial'), sans-serif;
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 
