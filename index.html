@@ -58,22 +58,59 @@
    
   <!-- Mobile-First Safety, Gavinhas & Smooth Navigation Override -->
   <style>
+    /* 1. Bloqueio absoluto e irrevogável de rolagem horizontal em toda a página */
     html {
       scroll-behavior: smooth !important;
-    }
-    html, body {
       overflow-x: hidden !important;
       max-width: 100vw !important;
-      margin: 0;
-      padding: 0;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+    body {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      position: relative !important;
+      margin: 0 !important;
+      padding: 0 !important;
       background: #000 !important;
+      -webkit-overflow-scrolling: touch !important;
     }
     #pagina {
       overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
       position: relative !important;
     }
     
-    /* Ocultar e remover patrocinadores externos */
+    /* 2. Todos os containers principais contidos na largura de tela */
+    section, header, footer,
+    .topo, .bann, .prese, .emph, .awho, .vide, .arti, .gain, .news, .foot, .cred, .copy,
+    #presentation, #awarded-home, #videos, #articles, #gallery-inter, #news, #footer {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      position: relative !important;
+      box-sizing: border-box !important;
+    }
+    
+    /* 3. Carrosséis contidos para não vazarem palco de slides para a direita */
+    .carousel-banner,
+    .bann .carousel-banner,
+    .bann .carousel-banner .owl-stage-outer,
+    .bann .carousel-banner .owl-stage,
+    .owl-carousel,
+    .owl-carousel .owl-stage-outer {
+      overflow: hidden !important;
+      max-width: 100vw !important;
+    }
+    
+    /* 4. Ocultar e remover patrocinadores externos */
     #marca, .marca-desk, .marca-mobo, .foot__partner, .cred__logo {
       display: none !important;
       visibility: hidden !important;
@@ -85,7 +122,7 @@
       padding: 0 !important;
     }
     
-    /* Gavinhas da Logo do Caramuela nos elementos decorativos */
+    /* 5. Gavinhas da Logo do Caramuela nos elementos decorativos */
     .foot .foot--circle {
       display: flex !important;
       visibility: visible !important;
@@ -95,6 +132,7 @@
       background-size: contain !important;
       opacity: 0.95 !important;
       pointer-events: none !important;
+      max-width: 100vw !important;
     }
     .sidebar--circle {
       background-image: url('assets/images/firula-sidebar.png') !important;
@@ -103,6 +141,7 @@
       background-size: contain !important;
       opacity: 0.9 !important;
       pointer-events: none !important;
+      max-width: 100% !important;
     }
     .firula-arti, .arti .firula-arti {
       background-image: url('assets/images/firula-arti.png') !important;
@@ -111,6 +150,7 @@
       background-size: contain !important;
       opacity: 0.85 !important;
       pointer-events: none !important;
+      max-width: 100vw !important;
     }
     .emph-firula, .emph .emph-firula {
       background-image: url('assets/images/firula-emph.png') !important;
@@ -119,6 +159,7 @@
       background-size: contain !important;
       opacity: 0.75 !important;
       pointer-events: none !important;
+      max-width: 100vw !important;
     }
     
     /* Topo / Header - Espaçamento do topo e alinhamento */
@@ -184,7 +225,74 @@
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
     }
 
-    @media (max-width: 768px) {
+    /* 6. Regras Específicas Mobile (< 992px) - Zero Scroll Horizontal */
+    @media (max-width: 991px) {
+      body, html, #pagina {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
+      
+      /* Elimina offsets negativos do layout que empurravam a tela para a direita */
+      .news__ld2__image {
+        position: static !important;
+        right: 0 !important;
+        margin: 20px auto 0 !important;
+        display: block !important;
+        max-width: 85% !important;
+        height: auto !important;
+      }
+      .awar::after, .gain::after, .gall::after, .bann__circle {
+        display: none !important;
+      }
+      *::before, *::after {
+        max-width: 100vw !important;
+      }
+      
+      /* Containers contidos na tela */
+      .container, .container-fluid, .container-foot, .container--topo, .container--gain {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
+      }
+      .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+      }
+      [class*="col-"] {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      
+      /* Elementos gráficos responsivos no celular */
+      .foot .foot--circle {
+        width: 100% !important;
+        max-width: 96vw !important;
+        height: 140px !important;
+        left: 50% !important;
+        transform: translate(-50%, 0) !important;
+      }
+      .arti .firula-arti {
+        width: 90% !important;
+        max-width: 320px !important;
+        height: 300px !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+      }
+      .emph .emph-firula {
+        width: 100% !important;
+        max-width: 100vw !important;
+        height: 180px !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+      }
+      
+      /* Espaço superior no mobile */
       .topo.normal .container--topo {
         padding-top: 36px !important;
         padding-bottom: 12px !important;
@@ -204,6 +312,7 @@
         max-height: 65px !important;
         filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.7));
       }
+
       .bann__cnt {
         height: 80vh !important;
         min-height: 520px !important;
@@ -211,12 +320,9 @@
       }
       .bann__title {
         font-size: 1.05rem !important;
-        color: #C04CFD !important;
-        font-weight: 800 !important;
         letter-spacing: 0.14em !important;
         text-align: center !important;
         margin-bottom: 8px !important;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 4px 12px rgba(0, 0, 0, 0.9), 0 0 2px #000 !important;
       }
       .bann__subtitle {
         font-size: 2.0rem !important;
@@ -226,12 +332,15 @@
       .bann__btn-banner {
         text-align: center !important;
       }
-      .container:not(.container--topo) {
-        max-width: 92% !important;
-        padding: 0 !important;
-      }
       .gain--home .gain__box {
         width: 48% !important;
+      }
+      
+      /* Imagens e mídias 100% fluidas */
+      img, video, iframe, svg, table {
+        max-width: 100% !important;
+        height: auto !important;
+        box-sizing: border-box !important;
       }
     }
   </style>
@@ -854,7 +963,10 @@
   <script>
     $(document).ready(function() {
       // Auto-close sidebar when clicking on menu anchor links
-      $('#menu_sidebar a.ancora, .sidebar__nav a.ancora').on('click', function(e) {
+      $('#menu_sidebar a.ancora, .sidebar__nav a.ancora, .sidebar ul li a').on('click', function(e) {
+        if ($('#menu-mobile').hasClass('aberto')) {
+          $('#a-mb-close').trigger('click');
+        }
         if ($('nav#menu_sidebar').hasClass('active')) {
           $('.topo__sidebar').trigger('click');
         }
@@ -878,6 +990,13 @@
           emailInput.val('');
         }
       });
+
+      // Trava ativa de prevenção de rolagem horizontal em dispositivos móveis
+      window.addEventListener('scroll', function() {
+        if (window.scrollX !== 0) {
+          window.scrollTo(0, window.scrollY);
+        }
+      }, { passive: true });
     });
   </script>
 </body>
