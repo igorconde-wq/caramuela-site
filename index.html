@@ -364,6 +364,56 @@
       pointer-events: none !important;
     }
     
+    /* Seção Ênfase (#emphasis / .emph): Fundo Verde Vibrante e Botão Laranja */
+    .emph, #emphasis {
+      background-color: #237E36 !important;
+      background: #237E36 !important;
+      position: relative !important;
+      overflow: hidden !important;
+      z-index: 10 !important;
+    }
+    .emph .container--emph {
+      position: relative !important;
+      z-index: 20 !important;
+    }
+    .emph__encompass__subtitle {
+      color: #FFFFFF !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+    }
+    .emph__encompass__btn-confira {
+      margin-top: 40px !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    .emph__encompass__btn-confira a {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 12px 42px !important;
+      height: auto !important;
+      min-height: 46px !important;
+      border: none !important;
+      background: #FC8D32 !important;
+      background-color: #FC8D32 !important;
+      color: #FFFFFF !important;
+      border-radius: 28px !important;
+      font-size: 1.05rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.05em !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+      transition: all 0.3s ease !important;
+      transform: scale(1) !important;
+      cursor: pointer !important;
+    }
+    .emph__encompass__btn-confira a:hover {
+      background: #FA6B14 !important;
+      background-color: #FA6B14 !important;
+      color: #FFFFFF !important;
+      transform: translateY(-2px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+    
     /* Topo / Header - Espaçamento do topo e alinhamento */
     .topo.normal .container--topo {
       display: flex !important;
@@ -850,6 +900,38 @@
         margin: 0 auto !important;
       }
       
+      /* Seção Ênfase no Mobile */
+      .emph, #emphasis {
+        height: auto !important;
+        min-height: 480px !important;
+        padding: 95px 20px 90px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: #237E36 !important;
+        background: #237E36 !important;
+      }
+      .emph .container--emph {
+        padding: 0 !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 480px !important;
+      }
+      .emph__encompass__subtitle {
+        font-size: 2.1rem !important;
+        line-height: 1.35 !important;
+        color: #FFFFFF !important;
+        text-align: center !important;
+        margin-bottom: 0 !important;
+      }
+      .emph__encompass__btn-confira {
+        margin-top: 32px !important;
+      }
+      .emph__encompass__btn-confira a {
+        padding: 12px 38px !important;
+        font-size: 1rem !important;
+      }
+
       /* Imagens e mídias 100% fluidas */
       img, video, iframe, svg, table {
         max-width: 100% !important;
@@ -1074,12 +1156,10 @@
                 <div class="container  container--emph">
             <div class="emph__encompass encompass boxAnimate">
                 <h2 class="emph__encompass__title title"></h2>
-                <h3 class="emph__encompass__subtitle subtitle">Há mais de 15 anos celebrando a música brasileira, o bloco de rua e a formação cultural!</h3>
+                <h3 class="emph__encompass__subtitle subtitle">15 anos celebrando a música brasileira, o forró e o carnaval!</h3>
                 <div class="emph__encompass__paragraph paragraph">
                                     </div>
-                                    <div class="emph__encompass__btn-confira">
-                        <a href="" data-fancybox data-src="https://www.youtube.com/watch?v=tEvR6Eq_amU">Assista ao Manifesto!</a>
-                    </div>
+                                    <div class="emph__encompass__btn-confira"><a href="#presentation" class="ancora">Participe</a></div>
                 
                
             </div>
