@@ -93,21 +93,95 @@
       background: #120024 !important;
     }
     
-    /* Topo & Banner com fundo em Roxo Elegante (eliminando fundo preto) */
+    /* Topo & Banner com fundo em Roxo Elegante */
     .topo.normal {
       background: transparent !important;
       position: absolute !important;
       width: 100% !important;
+      top: 0 !important;
+      left: 0 !important;
       z-index: 1000 !important;
+      padding-top: 30px !important;
+      padding-bottom: 15px !important;
     }
     #banner, .bann {
-      background: linear-gradient(180deg, #1A002C 0%, #2E0854 45%, #3E0B6E 100%) !important;
+      position: relative !important;
+      width: 100% !important;
+      height: 100vh !important;
+      min-height: 580px !important;
+      max-height: 920px !important;
+      background: linear-gradient(135deg, #1A002C 0%, #2E0854 45%, #3E0B6E 100%) !important;
+      overflow: hidden !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .carousel-banner,
+    .bann .carousel-banner,
+    .bann .owl-stage-outer,
+    .bann .owl-stage,
+    .bann .owl-item,
+    .bann__enc {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 100% !important;
       position: relative !important;
       overflow: hidden !important;
-    }
-    .bann__cnt {
       background: transparent !important;
-      background-image: none !important;
+    }
+    
+    /* A foto que entra com movimento ocupando TODA a tela e cobrindo o fundo roxo */
+    .bann__single {
+      display: block !important;
+      visibility: visible !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      background-image: url('assets/images/banner_caramuela.jpg') !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      border: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      z-index: 1 !important;
+      animation: heroCoverEntrance 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both !important;
+      will-change: transform, opacity;
+    }
+
+    @keyframes heroCoverEntrance {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+      25% {
+        opacity: 0.95;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    /* Overlay elegante para legibilidade perfeita do texto sobre a foto em tela cheia */
+    .bann__cnt {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background: linear-gradient(90deg, rgba(26,0,44,0.78) 0%, rgba(26,0,44,0.5) 45%, rgba(26,0,44,0.15) 100%) !important;
+      background-image: linear-gradient(90deg, rgba(26,0,44,0.78) 0%, rgba(26,0,44,0.5) 45%, rgba(26,0,44,0.15) 100%) !important;
+      z-index: 10 !important;
+      display: flex !important;
+      align-items: center !important;
     }
     .bann__cnt:before {
       display: none !important;
@@ -117,31 +191,6 @@
     }
     .bann__description::after {
       display: none !important;
-    }
-    
-    /* Apenas UMA foto da banda entrando com movimento (fadeInUpBig) */
-    .bann__single {
-      display: block !important;
-      visibility: visible !important;
-      position: absolute !important;
-      right: 7% !important;
-      left: auto !important;
-      bottom: 0 !important;
-      width: 540px !important;
-      max-width: 48vw !important;
-      height: 520px !important;
-      max-height: 82% !important;
-      background-image: url('assets/images/banner_caramuela.jpg') !important;
-      background-size: cover !important;
-      background-position: center center !important;
-      background-repeat: no-repeat !important;
-      border-radius: 24px 24px 0 0 !important;
-      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5) !important;
-      z-index: 50 !important;
-      transform: none !important;
-      opacity: 1 !important;
-      border: 3px solid rgba(255, 255, 255, 0.15) !important;
-      border-bottom: none !important;
     }
     .bann__circle {
       display: none !important;
@@ -246,6 +295,8 @@
       max-width: 170px !important;
       height: auto !important;
       opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
     }
     .topo__logo img {
       width: 100% !important;
@@ -368,17 +419,28 @@
       }
       
       /* Espaço superior no mobile */
+      .topo.normal {
+        padding-top: 15px !important;
+        padding-bottom: 5px !important;
+      }
       .topo.normal .container--topo {
-        padding-top: 36px !important;
-        padding-bottom: 12px !important;
-        max-width: 92% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        padding-top: 15px !important;
+        padding-bottom: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
       }
       .topo__logo {
         width: 110px !important;
         max-width: 125px !important;
         height: auto !important;
+        opacity: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        transform: none !important;
+        animation: none !important;
       }
       .topo__logo img {
         width: 100% !important;
@@ -388,52 +450,63 @@
         filter: none !important;
       }
 
-      /* Mobile Banner: Fundo Roxo com uma foto única em destaque entrando com movimento */
+      /* Mobile Banner: Fundo Roxo com foto ocupando tela cheia ao entrar */
       #banner, .bann {
-        background: linear-gradient(180deg, #1A002C 0%, #2E0854 40%, #3E0B6E 100%) !important;
-        height: auto !important;
-        min-height: 620px !important;
-        padding-top: 85px !important;
-        padding-bottom: 30px !important;
+        height: 100vh !important;
+        min-height: 560px !important;
+        max-height: 850px !important;
+        padding: 0 !important;
+        background: linear-gradient(180deg, #1A002C 0%, #2E0854 45%, #3E0B6E 100%) !important;
+        position: relative !important;
+        overflow: hidden !important;
       }
       .bann__enc {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
         width: 100% !important;
+        height: 100% !important;
         position: relative !important;
+        display: block !important;
       }
       .bann__single {
         display: block !important;
         visibility: visible !important;
-        position: relative !important;
-        width: 90% !important;
-        max-width: 360px !important;
-        height: 230px !important;
-        margin: 10px auto 20px !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
         background-image: url('assets/images/banner_caramuela.jpg') !important;
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
-        border-radius: 18px !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.15) !important;
-        z-index: 50 !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
+        z-index: 1 !important;
+        animation: heroCoverEntrance 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both !important;
       }
       .bann__cnt {
-        height: auto !important;
-        min-height: 0 !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
-        background: transparent !important;
-        position: relative !important;
+        height: 100% !important;
+        background: linear-gradient(180deg, rgba(26,0,44,0.55) 0%, rgba(26,0,44,0.3) 35%, rgba(26,0,44,0.85) 100%) !important;
+        z-index: 10 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding-top: 60px !important;
       }
       .bann__txt {
-        padding: 0 16px !important;
+        padding: 0 20px !important;
         text-align: center !important;
-        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
       .bann__description {
         padding-bottom: 15px !important;
@@ -441,33 +514,30 @@
         background: transparent !important;
       }
       .bann__title {
-        font-size: 0.85rem !important;
-        color: #E0AAFF !important;
+        font-size: 0.95rem !important;
+        color: #D946EF !important;
         font-weight: 800 !important;
-        letter-spacing: 0.08em !important;
+        letter-spacing: 0.12em !important;
         text-align: center !important;
-        margin: 0 auto 8px !important;
-        text-shadow: none !important;
-        filter: none !important;
-        white-space: normal !important;
+        margin: 0 auto 10px !important;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7) !important;
         display: block !important;
         width: 100% !important;
       }
       .bann__subtitle {
-        font-size: 1.5rem !important;
+        font-size: 1.65rem !important;
         color: #FFFFFF !important;
         font-weight: 900 !important;
-        line-height: 1.15 !important;
+        line-height: 1.2 !important;
         text-align: center !important;
         margin: 0 auto 18px !important;
-        text-shadow: none !important;
-        filter: none !important;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
         display: block !important;
         width: 100% !important;
       }
       .bann__btn-banner {
         text-align: center !important;
-        margin-top: 10px !important;
+        margin-top: 14px !important;
       }
       .bann__btn {
         background: linear-gradient(135deg, #C04CFD 0%, #7B2CBF 100%) !important;
