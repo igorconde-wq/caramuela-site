@@ -523,17 +523,26 @@
       font-size: 2.8rem !important;
       font-weight: 800 !important;
       letter-spacing: 2px !important;
-      margin-bottom: 8px !important;
+      margin-bottom: 6px !important;
       text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
     }
-    .vide__encompass__paragraph p {
+    .vide__encompass__subtitle p {
       color: #FFA726 !important;
       font-size: 1.25rem !important;
-      font-weight: 600 !important;
-      letter-spacing: 1px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1.5px !important;
       text-transform: uppercase !important;
-      margin-bottom: 0 !important;
+      margin-bottom: 14px !important;
       text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4) !important;
+    }
+    .vide__encompass__paragraph p {
+      color: #F7F5E8 !important;
+      font-size: 1.12rem !important;
+      font-weight: 400 !important;
+      line-height: 1.65 !important;
+      max-width: 820px !important;
+      margin: 0 auto !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
     }
     .vide__content--musicos {
       position: relative !important;
@@ -554,7 +563,7 @@
       align-items: flex-start !important;
       gap: 36px 30px !important;
       width: 100% !important;
-      padding: 0 20px !important;
+      padding: 0 20px 45px 20px !important;
     }
     .musico-card {
       display: flex !important;
@@ -563,20 +572,20 @@
       text-align: center !important;
       width: 165px !important;
       opacity: 0 !important;
-      transform: translateY(30px) scale(0.92) !important;
-      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      transform: translateY(35px) scale(0.92) !important;
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) !important;
       will-change: opacity, transform !important;
     }
     .musico-card.animate {
       opacity: 1 !important;
       transform: translateY(0) scale(1) !important;
     }
-    .musico-card:nth-child(1) { transition-delay: 0.08s !important; }
-    .musico-card:nth-child(2) { transition-delay: 0.18s !important; }
-    .musico-card:nth-child(3) { transition-delay: 0.28s !important; }
-    .musico-card:nth-child(4) { transition-delay: 0.38s !important; }
-    .musico-card:nth-child(5) { transition-delay: 0.48s !important; }
-    .musico-card:nth-child(6) { transition-delay: 0.58s !important; }
+    .musico-card:nth-child(even) {
+      margin-top: 48px !important;
+    }
+    .musico-card:nth-child(odd) {
+      margin-top: 0 !important;
+    }
 
     .musico-photo-wrap {
       width: 145px !important;
@@ -1434,20 +1443,37 @@
         min-height: auto !important;
       }
       .vide__encompass {
-        margin-bottom: 28px !important;
+        margin-bottom: 24px !important;
       }
       .vide__encompass__title {
         font-size: 2.1rem !important;
       }
+      .vide__encompass__subtitle p {
+        font-size: 0.95rem !important;
+        margin-bottom: 8px !important;
+      }
       .vide__encompass__paragraph p {
-        font-size: 1.05rem !important;
+        font-size: 0.92rem !important;
+        line-height: 1.5 !important;
+        padding: 0 10px !important;
       }
       .musicos-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
         gap: 22px 14px !important;
-        padding: 0 10px !important;
+        padding: 0 10px 32px 10px !important;
       }
       .musico-card {
         width: 140px !important;
+      }
+      .musico-card:nth-child(even) {
+        margin-top: 36px !important;
+      }
+      .musico-card:nth-child(odd) {
+        margin-top: 0 !important;
       }
       .musico-photo-wrap {
         width: 105px !important;
@@ -1732,13 +1758,16 @@
     <video id="myVideo" class="vide__bg boxAnimate" autoplay="" loop="" muted="" playsinline="" itemprop = "trailer">
         <source src="https://www.premiodamusica.com.br/painel/dados/arquivos/video_aparente_37230ab6a.mp4" type="video/mp4">   
     </video>
-    <div class="vide__encompass text-center boxAnimate">
+        <div class="vide__encompass text-center boxAnimate">
         <h2 class="vide__encompass__title">A BANDA</h2>
+        <div class="vide__encompass__subtitle">
+            <p>Sexteto Tradicional de Forró</p> 
+        </div>
         <div class="vide__encompass__paragraph mx-auto">
-           <p>Sexteto Tradicional de Forró</p> 
+            <p>Sexteto profissional em apresentações vibrantes nos principais palcos e festivais do Brasil, reverenciando mestres como Gonzaga, Dominguinhos, Jackson do Pandeiro e Sivuca, somados a composições autorais.</p> 
         </div>
     </div>
-        <div class="vide__content vide__content--musicos">
+        <div class="vide__musicos-wrap vide__content--musicos">
         <div class="musicos-grid">
             <div class="musico-card">
                 <div class="musico-photo-wrap">
@@ -2165,38 +2194,54 @@
         }
       })();
 
-      // Animação de fade-in para os 6 músicos da banda (A Banda)
+      // Animação sequencial (uma a uma) em fade-in para os 6 músicos da banda ao rolar até a seção
       (function() {
         var cards = document.querySelectorAll('.musico-card');
-        if (!cards.length) return;
+        var section = document.getElementById('videos');
+        if (!cards.length || !section) return;
 
+        var hasTriggered = false;
+
+        function revealOneByOne() {
+          if (hasTriggered) return;
+          hasTriggered = true;
+
+          if (observer) {
+            try { observer.unobserve(section); } catch(e) {}
+          }
+          $(window).off('scroll.musicos touchmove.musicos resize.musicos');
+
+          cards.forEach(function(card, index) {
+            setTimeout(function() {
+              card.classList.add('animate');
+            }, index * 260);
+          });
+        }
+
+        var observer = null;
         if ('IntersectionObserver' in window) {
-          var observer = new IntersectionObserver(function(entries) {
+          observer = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
               if (entry.isIntersecting) {
-                cards.forEach(function(card) {
-                  card.classList.add('animate');
-                });
-                observer.unobserve(entry.target);
+                revealOneByOne();
               }
             });
-          }, { threshold: 0.15 });
-
-          var section = document.getElementById('videos');
-          if (section) observer.observe(section);
+          }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+          observer.observe(section);
         }
 
-        function checkMusicos() {
-          var section = $('#videos');
-          if (section.length) {
-            var scrollBottom = $(window).scrollTop() + $(window).height() * 0.9;
-            if (scrollBottom > section.offset().top) {
-              $('.musico-card').addClass('animate');
-            }
+        function checkScroll() {
+          if (hasTriggered) return;
+          var rect = section.getBoundingClientRect();
+          if (rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0) {
+            revealOneByOne();
           }
         }
-        $(window).on('scroll resize touchmove', checkMusicos);
-        checkMusicos();
+
+        $(window).on('scroll.musicos touchmove.musicos resize.musicos', checkScroll);
+        if (window.scrollY > 100) {
+          checkScroll();
+        }
       })();
     });
   </script>
