@@ -681,16 +681,17 @@
       cursor: pointer !important;
       display: inline-flex !important;
       align-items: center !important;
-      gap: 10px !important;
-      background: rgba(26, 0, 44, 0.78) !important;
+      gap: 12px !important;
+      background: transparent !important;
       background-image: none !important;
-      backdrop-filter: blur(10px) !important;
-      -webkit-backdrop-filter: blur(10px) !important;
-      padding: 9px 18px !important;
-      border-radius: 30px !important;
-      border: 1px solid rgba(255, 255, 255, 0.25) !important;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4) !important;
-      transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      padding: 6px 4px !important;
+      border-radius: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.85)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5)) !important;
+      transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease !important;
       opacity: 1 !important;
       transform: none !important;
       animation: none !important;
@@ -707,10 +708,27 @@
     .topo.flutuante .topo__sidebar:hover,
     #topo .topo__sidebar:hover,
     #topo.flutuante .topo__sidebar:hover {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      transform: scale(1.06) !important;
+      filter: drop-shadow(0 2px 6px rgba(252, 141, 50, 0.8)) !important;
+    }
+
+    .topo__sidebar:hover .topo__sidebar__title,
+    .topo.normal .topo__sidebar:hover .topo__sidebar__title,
+    .topo.flutuante .topo__sidebar:hover .topo__sidebar__title,
+    #topo .topo__sidebar:hover .topo__sidebar__title,
+    #topo.flutuante .topo__sidebar:hover .topo__sidebar__title {
+      color: #FC8D32 !important;
+    }
+
+    .topo__sidebar:hover .topo__sidebar__square span,
+    .topo.normal .topo__sidebar:hover .topo__sidebar__square span,
+    .topo.flutuante .topo__sidebar:hover .topo__sidebar__square span,
+    #topo .topo__sidebar:hover .topo__sidebar__square span,
+    #topo.flutuante .topo__sidebar:hover .topo__sidebar__square span {
       background: #FC8D32 !important;
-      border-color: #FC8D32 !important;
-      box-shadow: 0 6px 22px rgba(252, 141, 50, 0.5) !important;
-      transform: translateY(-2px) scale(1.05) !important;
     }
 
     .topo__sidebar:active,
@@ -718,7 +736,7 @@
     .topo.flutuante .topo__sidebar:active,
     #topo .topo__sidebar:active,
     #topo.flutuante .topo__sidebar:active {
-      transform: scale(0.96) !important;
+      transform: scale(0.95) !important;
     }
     
     .topo__sidebar__title,
@@ -729,13 +747,14 @@
       display: block !important;
       visibility: visible !important;
       color: #FFFFFF !important;
-      font: 1rem "BTG Pactual Sans", sans-serif, arial !important;
+      font: 1.05rem "BTG Pactual Sans", sans-serif, arial !important;
       font-weight: 700 !important;
       margin: 0 !important;
       line-height: 1 !important;
       letter-spacing: 0.04em !important;
       text-transform: lowercase !important;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+      transition: color 0.2s ease !important;
     }
     
     .topo__sidebar__square,
@@ -745,10 +764,10 @@
     #topo.flutuante .topo__sidebar__square {
       display: flex !important;
       flex-direction: column !important;
-      gap: 4px !important;
+      gap: 5px !important;
       align-items: center !important;
       justify-content: center !important;
-      width: 24px !important;
+      width: 36px !important;
       margin: 0 !important;
     }
     
@@ -759,28 +778,28 @@
     #topo.flutuante .topo__sidebar__square span {
       display: block !important;
       background: #FFFFFF !important;
-      height: 2px !important;
-      border-radius: 2px !important;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+      height: 2.5px !important;
+      border-radius: 3px !important;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.5) !important;
       transition: background 0.2s ease !important;
     }
     
     .topo__sidebar__square span:nth-of-type(1),
     .topo.normal .topo__sidebar__square span:nth-of-type(1),
     .topo.flutuante .topo__sidebar__square span:nth-of-type(1) {
-      width: 16px !important;
+      width: 24px !important;
     }
     
     .topo__sidebar__square span:nth-of-type(2),
     .topo.normal .topo__sidebar__square span:nth-of-type(2),
     .topo.flutuante .topo__sidebar__square span:nth-of-type(2) {
-      width: 24px !important;
+      width: 36px !important;
     }
     
     .topo__sidebar__square span:nth-of-type(3),
     .topo.normal .topo__sidebar__square span:nth-of-type(3),
     .topo.flutuante .topo__sidebar__square span:nth-of-type(3) {
-      width: 16px !important;
+      width: 24px !important;
     }
     
     .topo.flutuante {
@@ -927,38 +946,46 @@
       #topo.flutuante .topo__sidebar {
         top: 18px !important;
         right: 18px !important;
-        padding: 7px 15px !important;
-        gap: 8px !important;
+        padding: 4px !important;
+        gap: 10px !important;
+        background: transparent !important;
+        background-image: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.85)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5)) !important;
       }
       .topo__sidebar__title,
       .topo.normal .topo__sidebar__title,
       .topo.flutuante .topo__sidebar__title,
       #topo .topo__sidebar__title,
       #topo.flutuante .topo__sidebar__title {
-        font-size: 0.9rem !important;
+        font-size: 0.95rem !important;
       }
       .topo__sidebar__square,
       .topo.normal .topo__sidebar__square,
       .topo.flutuante .topo__sidebar__square,
       #topo .topo__sidebar__square,
       #topo.flutuante .topo__sidebar__square {
-        width: 20px !important;
-        gap: 3.5px !important;
+        width: 30px !important;
+        gap: 4px !important;
       }
       .topo__sidebar__square span:nth-of-type(1),
       .topo.normal .topo__sidebar__square span:nth-of-type(1),
       .topo.flutuante .topo__sidebar__square span:nth-of-type(1) {
-        width: 14px !important;
+        width: 20px !important;
       }
       .topo__sidebar__square span:nth-of-type(2),
       .topo.normal .topo__sidebar__square span:nth-of-type(2),
       .topo.flutuante .topo__sidebar__square span:nth-of-type(2) {
-        width: 20px !important;
+        width: 30px !important;
       }
       .topo__sidebar__square span:nth-of-type(3),
       .topo.normal .topo__sidebar__square span:nth-of-type(3),
       .topo.flutuante .topo__sidebar__square span:nth-of-type(3) {
-        width: 14px !important;
+        width: 20px !important;
       }
 
       /* Mobile Banner: Fundo Roxo com foto ocupando tela cheia ao entrar */
