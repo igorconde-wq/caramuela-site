@@ -260,7 +260,7 @@ margin-top: 136px !important;
   margin: 0 auto;
 }
 .sidebar .sidebar--circle{
-  background-image:url('https://www.premiodamusica.com.br/assets/images/firula-sidebar.png');
+  background-image:url('../images/firula-sidebar.png');
   width: 27%;
   height: 488px;
   top: 50%  !important;
@@ -542,7 +542,7 @@ margin-top: 136px !important;
   
 }
   .awar .awar-firula1{
-    background-image: url(https://www.premiodamusica.com.br/assets/images/firula-artista2.png) 
+    background-image: url(../images/firula-artista2.png) 
 !important;
     width: 129px;
     height: 270px;
@@ -925,7 +925,7 @@ left: -4px;
   width: 90%;
 }
 .sidebar:after {
-  background-image: url("https://www.premiodamusica.com.br/assets/images/firula-sidebar.png");
+  background-image: url("../images/firula-sidebar.png");
   width: 143px;
   height: 460px;
   bottom: 25px;
@@ -1516,7 +1516,7 @@ left: -4px;
   left: 0;
   right: inherit;
   top: 181px;
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-artista-mob1.png);
+  background-image: url(../images/firula-artista-mob1.png);
 }
 .emph__encompass__title{
   margin-bottom: 16px;
@@ -1559,7 +1559,7 @@ left: -4px;
   width: 328px;
   height: 316px;
   display: flex;
-  background-image: url(https://www.premiodamusica.com.br/assets/images/firula-artista-mob2.png);
+  background-image: url(../images/firula-artista-mob2.png);
 }
 .hono .container--hono{
   padding: 135px 0 115px 0;
