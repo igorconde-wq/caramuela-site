@@ -246,17 +246,12 @@ $(".data-category").on('click', function(e){
     $('.bann__cnt').css('height', $(window).outerHeight());
 
     $('.carousel-banner').owlCarousel({
-        loop: true,
-        autoplay: true,
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 8000,
-        paginationSpeed: 8000,
-        autoplayTimeout: 8000,
+        loop: false,
+        autoplay: false,
+        dots: false,
+        navigation: false,
         singleItem: true,
         responsiveClass: true,
-        transitionStyle: "fade",
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut',
         items: 1
     });
     /*Fim - carousel-banner*/
