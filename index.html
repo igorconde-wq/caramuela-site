@@ -445,18 +445,125 @@
       filter: none !important;
     }
     
-    /* Botão e ícone do menu com contraste */
-    .topo__sidebar {
-      opacity: 1 !important;
-      display: flex !important;
+    /* Botão de Menu Flutuante Permanente - Sempre na tela e clicável durante toda a rolagem vertical */
+    .topo__sidebar,
+    .topo.normal .topo__sidebar,
+    .topo.flutuante .topo__sidebar,
+    #topo .topo__sidebar,
+    #topo.flutuante .topo__sidebar {
+      position: fixed !important;
+      top: 24px !important;
+      right: 28px !important;
+      z-index: 999999 !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
       align-items: center !important;
-      cursor: pointer;
+      gap: 10px !important;
+      background: rgba(26, 0, 44, 0.78) !important;
+      background-image: none !important;
+      backdrop-filter: blur(10px) !important;
+      -webkit-backdrop-filter: blur(10px) !important;
+      padding: 9px 18px !important;
+      border-radius: 30px !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4) !important;
+      transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease !important;
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+      pointer-events: auto !important;
+      text-decoration: none !important;
+      width: auto !important;
+      height: auto !important;
+      margin: 0 !important;
+      line-height: normal !important;
     }
-    .topo__sidebar__title {
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+    
+    .topo__sidebar:hover,
+    .topo.normal .topo__sidebar:hover,
+    .topo.flutuante .topo__sidebar:hover,
+    #topo .topo__sidebar:hover,
+    #topo.flutuante .topo__sidebar:hover {
+      background: #FC8D32 !important;
+      border-color: #FC8D32 !important;
+      box-shadow: 0 6px 22px rgba(252, 141, 50, 0.5) !important;
+      transform: translateY(-2px) scale(1.05) !important;
     }
-    .topo__sidebar__square span {
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+
+    .topo__sidebar:active,
+    .topo.normal .topo__sidebar:active,
+    .topo.flutuante .topo__sidebar:active,
+    #topo .topo__sidebar:active,
+    #topo.flutuante .topo__sidebar:active {
+      transform: scale(0.96) !important;
+    }
+    
+    .topo__sidebar__title,
+    .topo.normal .topo__sidebar__title,
+    .topo.flutuante .topo__sidebar__title,
+    #topo .topo__sidebar__title,
+    #topo.flutuante .topo__sidebar__title {
+      display: block !important;
+      visibility: visible !important;
+      color: #FFFFFF !important;
+      font: 1rem "BTG Pactual Sans", sans-serif, arial !important;
+      font-weight: 700 !important;
+      margin: 0 !important;
+      line-height: 1 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: lowercase !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+    }
+    
+    .topo__sidebar__square,
+    .topo.normal .topo__sidebar__square,
+    .topo.flutuante .topo__sidebar__square,
+    #topo .topo__sidebar__square,
+    #topo.flutuante .topo__sidebar__square {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 4px !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 24px !important;
+      margin: 0 !important;
+    }
+    
+    .topo__sidebar__square span,
+    .topo.normal .topo__sidebar__square span,
+    .topo.flutuante .topo__sidebar__square span,
+    #topo .topo__sidebar__square span,
+    #topo.flutuante .topo__sidebar__square span {
+      display: block !important;
+      background: #FFFFFF !important;
+      height: 2px !important;
+      border-radius: 2px !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+      transition: background 0.2s ease !important;
+    }
+    
+    .topo__sidebar__square span:nth-of-type(1),
+    .topo.normal .topo__sidebar__square span:nth-of-type(1),
+    .topo.flutuante .topo__sidebar__square span:nth-of-type(1) {
+      width: 16px !important;
+    }
+    
+    .topo__sidebar__square span:nth-of-type(2),
+    .topo.normal .topo__sidebar__square span:nth-of-type(2),
+    .topo.flutuante .topo__sidebar__square span:nth-of-type(2) {
+      width: 24px !important;
+    }
+    
+    .topo__sidebar__square span:nth-of-type(3),
+    .topo.normal .topo__sidebar__square span:nth-of-type(3),
+    .topo.flutuante .topo__sidebar__square span:nth-of-type(3) {
+      width: 16px !important;
+    }
+    
+    .topo.flutuante {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
     }
 
     /* Título 15 Anos em Branco Puro */
@@ -587,6 +694,48 @@
         height: auto !important;
         max-height: 130px !important;
         filter: none !important;
+      }
+      
+      /* Mobile Menu Flutuante Permanente */
+      .topo__sidebar,
+      .topo.normal .topo__sidebar,
+      .topo.flutuante .topo__sidebar,
+      #topo .topo__sidebar,
+      #topo.flutuante .topo__sidebar {
+        top: 18px !important;
+        right: 18px !important;
+        padding: 7px 15px !important;
+        gap: 8px !important;
+      }
+      .topo__sidebar__title,
+      .topo.normal .topo__sidebar__title,
+      .topo.flutuante .topo__sidebar__title,
+      #topo .topo__sidebar__title,
+      #topo.flutuante .topo__sidebar__title {
+        font-size: 0.9rem !important;
+      }
+      .topo__sidebar__square,
+      .topo.normal .topo__sidebar__square,
+      .topo.flutuante .topo__sidebar__square,
+      #topo .topo__sidebar__square,
+      #topo.flutuante .topo__sidebar__square {
+        width: 20px !important;
+        gap: 3.5px !important;
+      }
+      .topo__sidebar__square span:nth-of-type(1),
+      .topo.normal .topo__sidebar__square span:nth-of-type(1),
+      .topo.flutuante .topo__sidebar__square span:nth-of-type(1) {
+        width: 14px !important;
+      }
+      .topo__sidebar__square span:nth-of-type(2),
+      .topo.normal .topo__sidebar__square span:nth-of-type(2),
+      .topo.flutuante .topo__sidebar__square span:nth-of-type(2) {
+        width: 20px !important;
+      }
+      .topo__sidebar__square span:nth-of-type(3),
+      .topo.normal .topo__sidebar__square span:nth-of-type(3),
+      .topo.flutuante .topo__sidebar__square span:nth-of-type(3) {
+        width: 14px !important;
       }
 
       /* Mobile Banner: Fundo Roxo com foto ocupando tela cheia ao entrar */
@@ -1539,6 +1688,22 @@
   <!-- Interactive Enhancements for Caramuela -->
   <script>
     $(document).ready(function() {
+      // Menu flutuante sempre clicável em qualquer ponto da rolagem
+      $(document).on('click', '.topo__sidebar, .botao-sidebar, [data-sidebar="#menu_sidebar"]', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.sidebar-bg').css('display', 'block');
+        $('#menu-mobile').addClass('aberto');
+        $('body').css('overflow-y', 'hidden');
+      });
+
+      // Fechar sidebar ao clicar no fundo ou no botão fechar
+      $(document).on('click', '#a-mb-close, .sidebar-bg', function(e) {
+        $('.sidebar-bg').css('display', 'none');
+        $('#menu-mobile').removeClass('aberto');
+        $('body').css('overflow-y', 'visible');
+      });
+
       // Auto-close sidebar when clicking on menu anchor links
       $('#menu_sidebar a.ancora, .sidebar__nav a.ancora, .sidebar ul li a').on('click', function(e) {
         if ($('#menu-mobile').hasClass('aberto')) {
