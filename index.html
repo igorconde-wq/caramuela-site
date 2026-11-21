@@ -645,7 +645,7 @@
         display: none !important;
       }
 
-      /* Base do item: fotos maiores (176px) e animacao de entrada com transicao suave */
+      /* Base do item: fotos maiores (176px) e animacao de entrada com transicao suave ao rolar */
       .prese__ld2__item {
         width: 180px !important;
         max-width: 52% !important;
@@ -656,23 +656,23 @@
         left: 0 !important;
         right: 0 !important;
         top: 0 !important;
-        opacity: 0;
-        transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        opacity: 0 !important;
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
         will-change: transform, opacity;
       }
 
       /* Disposicao em ZIG-ZAG:
-         Item 1: Esquerda
-         Item 2: Um pouco abaixo mais a direita
-         Item 3: Mais abaixo a esquerda
-         Item 4: Mais abaixo a direita
+         Item 1: Esquerda (entra deslizando da esquerda e escalando)
+         Item 2: Um pouco abaixo mais a direita (entra deslizando da direita)
+         Item 3: Mais abaixo a esquerda (entra deslizando da esquerda)
+         Item 4: Mais abaixo a direita (entra deslizando da direita)
       */
       .prese__ld2__item:nth-of-type(odd),
       .carrossel-presetation .owl-item:nth-of-type(odd) .prese__ld2__item {
         align-self: flex-start !important;
         margin-left: 8px !important;
         margin-right: auto !important;
-        transform: translate3d(-38px, 20px, 0) scale(0.85);
+        transform: translate3d(-50px, 25px, 0) scale(0.82) !important;
         z-index: 2 !important;
       }
 
@@ -681,7 +681,7 @@
         align-self: flex-end !important;
         margin-left: auto !important;
         margin-right: 8px !important;
-        transform: translate3d(38px, 20px, 0) scale(0.85);
+        transform: translate3d(50px, 25px, 0) scale(0.82) !important;
         z-index: 3 !important;
       }
 
@@ -908,7 +908,7 @@
             <div class="prese__ld2 col col-md-8 animated-element d-flex justify-content-center">
                 <div class="carrossel-presetation">
                                 
-                    <div class="prese__ld2__item boxAnimate">
+                    <div class="prese__ld2__item">
                         <a href="#presentation" class="link-full" rel="next"></a>
                         <div class="prese__ld2__item__content">
                             <div class="svgs svgs--prese">
@@ -930,7 +930,7 @@
                     </div>
                     <!-- Fim prese__ld2__item -->
                                 
-                    <div class="prese__ld2__item boxAnimate">
+                    <div class="prese__ld2__item">
                         <a href="#awarded-home" class="link-full" rel="next"></a>
                         <div class="prese__ld2__item__content">
                             <div class="svgs svgs--prese">
@@ -952,7 +952,7 @@
                     </div>
                     <!-- Fim prese__ld2__item -->
                                 
-                    <div class="prese__ld2__item boxAnimate">
+                    <div class="prese__ld2__item">
                         <a href="#awarded-home" class="link-full" rel="next"></a>
                         <div class="prese__ld2__item__content">
                             <div class="svgs svgs--prese">
@@ -974,7 +974,7 @@
                     </div>
                     <!-- Fim prese__ld2__item -->
                                 
-                    <div class="prese__ld2__item boxAnimate">
+                    <div class="prese__ld2__item">
                         <a href="#articles" class="link-full" rel="next"></a>
                         <div class="prese__ld2__item__content">
                             <div class="svgs svgs--prese">
@@ -1424,6 +1424,48 @@
           window.scrollTo(0, window.scrollY);
         }
       }, { passive: true });
+
+      // Animação individual de cada foto ao entrar na tela com a rolagem
+      var presItems = document.querySelectorAll('.carrossel-presetation .prese__ld2__item');
+      if (presItems.length) {
+        if ('IntersectionObserver' in window) {
+          var presObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                presObserver.unobserve(entry.target);
+              }
+            });
+          }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+          });
+
+          presItems.forEach(function(item) {
+            presObserver.observe(item);
+          });
+        } else {
+          function checkPresScroll() {
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            presItems.forEach(function(el) {
+              if (scrollBottom > $(el).offset().top + 50) {
+                $(el).addClass('animate');
+              }
+            });
+          }
+          $(window).on('scroll resize', checkPresScroll);
+          checkPresScroll();
+        }
+
+        // Suporte para tela desktop quando a seção estiver visível
+        if (window.innerWidth >= 992) {
+          $(window).on('scroll', function() {
+            if ($('#presentation').hasClass('animate')) {
+              $('.carrossel-presetation .prese__ld2__item').addClass('animate');
+            }
+          });
+        }
+      }
     });
   </script>
 </body>
