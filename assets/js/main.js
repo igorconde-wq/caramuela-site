@@ -239,8 +239,8 @@ $(".data-category").on('click', function(e){
 
      /*Inicio - carousel-banner*/
 
-    $('.carousel-banner').css('width', $(window).outerWidth());
-    $('.bann__cnt').css('width', $(window).outerWidth());
+    $('.carousel-banner').css('width', '100%');
+    $('.bann__cnt').css('width', '100%');
 
     $('.carousel-banner').css('height', $(window).outerHeight());
     $('.bann__cnt').css('height', $(window).outerHeight());
