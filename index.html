@@ -272,8 +272,11 @@
       -webkit-filter: none !important;
       display: block !important;
     }
-    .sidebar.aberto .logo-sidebar {
+    .sidebar.aberto .logo-sidebar,
+    .sidebar.aberto .nav-sidebar {
       opacity: 1 !important;
+      animation: fadeIn 0.3s ease-in-out !important;
+      --animate-delay: 0s !important;
     }
     .sidebar #a-mb-close .title {
       color: #FFFFFF !important;
@@ -1159,13 +1162,13 @@
             <nav class="nav-sidebar d-flex">
                <ul class="mb-0 d-flex flex-column">
                   
-                                    <li><a href="#presentation" class="ancora">A Banda</a></li>
-                  <li><a href="#awarded-home" class="ancora">O Bloco</a></li>
-                  <li><a href="#awarded-home" class="ancora">As Oficinas</a></li>
-                  <li><a href="#videos" class="ancora">Vídeos & Mídia</a></li>
-                  <li><a href="#articles" class="ancora">Notícias & Histórias</a></li>
+                                    <li><a href="#presentation" class="ancora">Banda</a></li>
+                  <li><a href="#awarded-home" class="ancora">Bloco</a></li>
+                  <li><a href="#awarded-home" class="ancora">Oficinas</a></li>
+                  <li><a href="#videos" class="ancora">Videos & Midia</a></li>
                   <li><a href="#gallery-inter" class="ancora">Galeria & Fotos</a></li>
-                  <li><a href="assets/rider_tecnico_caramuela.pdf" target="_blank" download>Rider Técnico</a></li>
+                  <li><a href="#articles" class="ancora">Clipping</a></li>
+                  <li><a href="assets/rider_tecnico_caramuela.pdf" target="_blank" download>Portfólio</a></li>
                   <li><a href="#news" class="ancora">Contato & Shows</a></li>
                </ul>              
             </nav>
