@@ -959,13 +959,14 @@ left: -4px;
 .sidebar .rede-sidebar {
   display: flex;
   flex-direction: row;
-  gap: 0 7px;
-  position: relative;
-  left: inherit;
-  bottom: inherit;
+  gap: 0 14px;
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 10000;
   justify-content: center;
-  margin-top: -123px;
 }
 .prese__ld1__title {
   font-size: 2.375rem;
