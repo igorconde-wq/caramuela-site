@@ -272,11 +272,14 @@
       -webkit-filter: none !important;
       display: block !important;
     }
+    .sidebar .logo-sidebar,
     .sidebar.aberto .logo-sidebar,
+    .sidebar .nav-sidebar,
     .sidebar.aberto .nav-sidebar {
       opacity: 1 !important;
-      animation: fadeIn 0.3s ease-in-out !important;
-      --animate-delay: 0s !important;
+      visibility: visible !important;
+      animation: none !important;
+      -webkit-animation: none !important;
     }
     .sidebar #a-mb-close .title {
       color: #FFFFFF !important;
@@ -287,10 +290,48 @@
       background: #FFFFFF !important;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) !important;
     }
+    /* Sidebar Layout & Escadinha / Arco dos Links */
+    .sidebar .inside {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    .sidebar .nav-sidebar {
+      display: flex !important;
+      align-items: flex-end !important;
+      justify-content: center !important;
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .sidebar .nav-sidebar ul {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-end !important;
+      text-align: right !important;
+      margin-right: 180px !important;
+      gap: 26px 0 !important;
+      width: auto !important;
+      padding: 0 !important;
+    }
+    .sidebar .nav-sidebar li {
+      display: flex !important;
+      justify-content: flex-end !important;
+      align-self: flex-end !important;
+      text-align: right !important;
+      width: auto !important;
+      position: relative !important;
+    }
     .sidebar .nav-sidebar li a {
       color: #FFFFFF !important;
       font-weight: 700 !important;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) !important;
+      text-align: right !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+      font-size: 1.35rem !important;
     }
     .sidebar .nav-sidebar li a:hover {
       color: #1A002C !important;
@@ -298,6 +339,17 @@
     .sidebar .nav-sidebar li:after {
       background: rgba(255, 255, 255, 0.4) !important;
     }
+    
+    /* Escadinha dos links (formato em arco acompanhando a mandala) */
+    .sidebar .nav-sidebar li:nth-of-type(1) { margin-right: 27px !important; }
+    .sidebar .nav-sidebar li:nth-of-type(2) { margin-right: 64px !important; }
+    .sidebar .nav-sidebar li:nth-of-type(3) { margin-right: 96px !important; }
+    .sidebar .nav-sidebar li:nth-of-type(4) { margin-right: 120px !important; }
+    .sidebar .nav-sidebar li:nth-of-type(5) { margin-right: 138px !important; }
+    .sidebar .nav-sidebar li:nth-of-type(6) { margin-right: 130px !important; }
+    .sidebar .nav-sidebar li:nth-of-type(7) { margin-right: 106px !important; }
+    .sidebar .nav-sidebar li:nth-of-type(8) { margin-right: 84px !important; }
+
     .sidebar--circle {
       background-image: url('assets/images/firula-sidebar.png') !important;
       background-position: right bottom !important;
@@ -311,11 +363,11 @@
     .sidebar .rede-sidebar {
       display: flex !important;
       flex-direction: row !important;
-      gap: 14px !important;
+      gap: 12px !important;
       justify-content: center !important;
       align-items: center !important;
       position: absolute !important;
-      bottom: 28px !important;
+      bottom: 25px !important;
       left: 0 !important;
       right: 0 !important;
       width: 100% !important;
@@ -327,8 +379,8 @@
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
-      width: 40px !important;
-      height: 40px !important;
+      width: 38px !important;
+      height: 38px !important;
       border-radius: 50% !important;
       background-color: #ffffff !important;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
@@ -342,8 +394,8 @@
       background-color: #f7f7f7 !important;
     }
     .sidebar .rede-sidebar a.rede-circle svg.rede-icon {
-      width: 20px !important;
-      height: 20px !important;
+      width: 19px !important;
+      height: 19px !important;
       fill: #FC8D32 !important;
       display: block !important;
       transition: fill 0.2s ease !important;
@@ -1090,6 +1142,29 @@
         height: auto !important;
         box-sizing: border-box !important;
       }
+
+      /* Sidebar Escadinha no Mobile */
+      .sidebar .nav-sidebar {
+        padding-right: 28px !important;
+        margin-top: -20px !important;
+        width: 100% !important;
+      }
+      .sidebar .nav-sidebar ul {
+        margin-right: 0 !important;
+        gap: 18px 0 !important;
+        align-items: flex-end !important;
+      }
+      .sidebar .nav-sidebar li a {
+        font-size: 1.15rem !important;
+      }
+      .sidebar .nav-sidebar li:nth-of-type(1) { margin-right: 14px !important; }
+      .sidebar .nav-sidebar li:nth-of-type(2) { margin-right: 34px !important; }
+      .sidebar .nav-sidebar li:nth-of-type(3) { margin-right: 52px !important; }
+      .sidebar .nav-sidebar li:nth-of-type(4) { margin-right: 68px !important; }
+      .sidebar .nav-sidebar li:nth-of-type(5) { margin-right: 76px !important; }
+      .sidebar .nav-sidebar li:nth-of-type(6) { margin-right: 70px !important; }
+      .sidebar .nav-sidebar li:nth-of-type(7) { margin-right: 56px !important; }
+      .sidebar .nav-sidebar li:nth-of-type(8) { margin-right: 40px !important; }
     }
   </style>
 </head>
@@ -1186,6 +1261,9 @@
          </a>
          <a href="https://wa.me/5521975938088" rel="external" target="_blank" alt="WhatsApp" title="WhatsApp" class="rede-circle">
             <svg viewBox="0 0 24 24" class="rede-icon" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.778.978-.954 1.179-.176.201-.351.226-.652.075s-1.271-.469-2.42-1.494c-.895-.798-1.5-1.783-1.676-2.084-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.1-.201.05-.377-.025-.527s-.678-1.635-.929-2.241c-.244-.59-.492-.51-.678-.52l-.577-.01c-.2 0-.527.075-.803.377s-1.054 1.03-1.054 2.511 1.079 2.912 1.23 3.113c.15.201 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.722.23 1.379.197 1.9-.12.58-.354 1.78-.726 2.03-1.428.25-.702.25-1.304.175-1.428-.075-.124-.276-.2-.577-.35zM12.04 2C6.51 2 2.02 6.49 2.02 12.02c0 1.96.565 3.79 1.54 5.34L2 22l4.82-1.52c1.5 1 3.28 1.56 5.22 1.56 5.53 0 10.02-4.49 10.02-10.02C22.06 6.49 17.57 2 12.04 2zm0 18.25c-1.72 0-3.32-.51-4.67-1.39l-.33-.22-3.46 1.09 1.12-3.37-.24-.36c-.98-1.46-1.5-3.18-1.5-4.98 0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.23-8.32 8.23z"/></svg>
+         </a>
+         <a href="mailto:contato@caramuela.com.br" alt="E-mail" title="E-mail" class="rede-circle">
+            <svg viewBox="0 0 24 24" class="rede-icon" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
          </a>
       </div>  
    </div>
