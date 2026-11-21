@@ -1169,7 +1169,9 @@ left: -4px;
 }
 .news__ld2__image {
   position: relative;
-  right: -202px;
+  right: 0 !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
   bottom: 0;
 }
 .arti::before {
@@ -1553,13 +1555,7 @@ left: -4px;
   margin:0 auto;
 }
 .awar::after {
-  right: -196px;
-  bottom: -153px;
-  left: inherit;
-  width: 328px;
-  height: 316px;
-  display: flex;
-  background-image: url(../images/firula-artista-mob2.png);
+  display: none !important;
 }
 .hono .container--hono{
   padding: 135px 0 115px 0;
@@ -1763,11 +1759,7 @@ footer{
   left: 112px;
 }
 .gain::after {
-  width: 602px;
-  height: 1784px;
-  position: absolute;
-  top: -326px;
-  left: -253px;
+  display: none !important;
 }
 .gain__content{
   margin-top: 59.67px;
