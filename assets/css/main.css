@@ -2328,6 +2328,9 @@ filter: brightness(0) saturate(100%) invert(9%) sepia(12%) saturate(4462%) hue-r
   /* z-index: -1; */
 }
 .emph .emph-firula {
+  display: none !important;
+  visibility: hidden !important;
+
   content: "";
   width: 95%;
   height: 538px;
