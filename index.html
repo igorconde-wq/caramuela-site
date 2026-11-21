@@ -304,8 +304,46 @@
       pointer-events: none !important;
       max-width: 100% !important;
     }
-    .sidebar .rede-sidebar a img {
-      filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.3)) !important;
+    /* Sidebar Social Media Circles */
+    .sidebar .rede-sidebar {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 14px !important;
+      justify-content: center !important;
+      align-items: center !important;
+      position: absolute !important;
+      bottom: 28px !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      z-index: 10000 !important;
+      opacity: 1 !important;
+    }
+    .sidebar .rede-sidebar a.rede-circle {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50% !important;
+      background-color: #ffffff !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+      text-decoration: none !important;
+      flex-shrink: 0 !important;
+    }
+    .sidebar .rede-sidebar a.rede-circle:hover {
+      transform: translateY(-2px) scale(1.08) !important;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25) !important;
+      background-color: #f7f7f7 !important;
+    }
+    .sidebar .rede-sidebar a.rede-circle svg.rede-icon {
+      width: 20px !important;
+      height: 20px !important;
+      fill: #FC8D32 !important;
+      display: block !important;
+      transition: fill 0.2s ease !important;
     }
     .firula-arti, .arti .firula-arti {
       background-image: url('assets/images/firula-arti.png') !important;
@@ -902,17 +940,20 @@
             </nav>
          </div>
       </nav>
-      <div class="rede-sidebar">
-                  <a href="https://www.facebook.com/caramuelaoficial" rel="external" target="_blank" alt="Facebook">
-            <img src="assets/images/rede-black1.png" alt="Facebook" loading="lazy">
+            <div class="rede-sidebar">
+         <a href="https://www.instagram.com/caramuelaoficial" rel="external" target="_blank" alt="Instagram" title="Instagram" class="rede-circle">
+            <svg viewBox="0 0 24 24" class="rede-icon" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
          </a>
-                  <a href="https://www.youtube.com/@caramuelaoficial" rel="external" target="_blank" alt="Youtube">
-            <img src="assets/images/rede-black2.png" alt="Youtube" loading="lazy">
+         <a href="https://www.tiktok.com/@caramuelaoficial" rel="external" target="_blank" alt="TikTok" title="TikTok" class="rede-circle">
+            <svg viewBox="0 0 24 24" class="rede-icon" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
          </a>
-                  <a href="https://www.instagram.com/caramuelaoficial" rel="external" target="_blank" alt="WhatsApp">
-            <img src="assets/images/rede-black3.png" alt="WhatsApp" loading="lazy">
+         <a href="https://www.youtube.com/@caramuelaoficial" rel="external" target="_blank" alt="YouTube" title="YouTube" class="rede-circle">
+            <svg viewBox="0 0 24 24" class="rede-icon" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
          </a>
-               </div>  
+         <a href="https://wa.me/5521975938088" rel="external" target="_blank" alt="WhatsApp" title="WhatsApp" class="rede-circle">
+            <svg viewBox="0 0 24 24" class="rede-icon" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.778.978-.954 1.179-.176.201-.351.226-.652.075s-1.271-.469-2.42-1.494c-.895-.798-1.5-1.783-1.676-2.084-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.1-.201.05-.377-.025-.527s-.678-1.635-.929-2.241c-.244-.59-.492-.51-.678-.52l-.577-.01c-.2 0-.527.075-.803.377s-1.054 1.03-1.054 2.511 1.079 2.912 1.23 3.113c.15.201 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.722.23 1.379.197 1.9-.12.58-.354 1.78-.726 2.03-1.428.25-.702.25-1.304.175-1.428-.075-.124-.276-.2-.577-.35zM12.04 2C6.51 2 2.02 6.49 2.02 12.02c0 1.96.565 3.79 1.54 5.34L2 22l4.82-1.52c1.5 1 3.28 1.56 5.22 1.56 5.53 0 10.02-4.49 10.02-10.02C22.06 6.49 17.57 2 12.04 2zm0 18.25c-1.72 0-3.32-.51-4.67-1.39l-.33-.22-3.46 1.09 1.12-3.37-.24-.36c-.98-1.46-1.5-3.18-1.5-4.98 0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.23-8.32 8.23z"/></svg>
+         </a>
+      </div>  
    </div>
 <!-- Fim-Sidebar -->
 <!-- Inicio-bann -->
