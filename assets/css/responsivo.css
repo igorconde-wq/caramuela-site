@@ -303,10 +303,10 @@ margin-top: 136px !important;
 }
 .edit__text__centro ul li a:hover,
 .edit__text__centro ul li a.active{
-  font: 28px "BTG Pactual Sans", sans-serif, arial;
+  font: 28px "Montserrat", sans-serif, arial;
 } 
 .edit__text__centro ul li a {
-  font: 22px "BTG Pactual Sans", sans-serif, arial;
+  font: 22px "Montserrat", sans-serif, arial;
 }
 .edit__text__centro ul {
   padding-left: 0;
@@ -318,7 +318,7 @@ margin-top: 136px !important;
   width: 65%;
 }
 .edit__category__title {
-  font: 28px "BTG Pactual Sans", sans-serif, arial;
+  font: 28px "Montserrat", sans-serif, arial;
   font-weight: 600;
 }
 .edit__content__box__tag {
@@ -650,7 +650,7 @@ left: -4px;
 }
 .awnt__advice::before{
   content: "";
-  background-image: url(https://www.premiodamusica.com.br/assets/images/premio1.png);
+  background-image: url();
   width: 168px;
   height: 447px;
   z-index: 100;
@@ -665,7 +665,7 @@ left: -4px;
 }
 .awnt__advice::after{
       content: "";
-      background-image: url(https://www.premiodamusica.com.br/assets/images/premio2.png);
+      background-image: url();
       width: 78p;
       height: 808px;
       z-index: 100;
@@ -932,7 +932,7 @@ left: -4px;
 }
 
 .sidebar .nav-sidebar li a {
-  font: 1.125rem "BTG Pactual Sans", sans-serif, arial;
+  font: 1.125rem "Montserrat", sans-serif, arial;
 }
 .sidebar .nav-sidebar ul {
   margin-right: 0;
@@ -1505,7 +1505,7 @@ left: -4px;
   margin: 0 auto;
   }
   .form .acept-form{
-    font: 0.75rem "BTG Pactual Sans", sans-serif, arial;
+    font: 0.75rem "Montserrat", sans-serif, arial;
   }
 .hoin__box__description__paragraph ul li::before{
   display: inline-block;
@@ -1582,7 +1582,7 @@ left: -4px;
 .edit__content__box__description__title{
   /* line-height: 21px; */
   /* margin-bottom:5px; */
-  font: 19px "BTG Pactual Sans", sans-serif, arial;
+  font: 19px "Montserrat", sans-serif, arial;
   font-weight: 600;
 }
 .edit__content__box__description__subtitle{
