@@ -307,36 +307,53 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) !important;
     }
     /* Sidebar Layout & Escadinha / Arco dos Links */
+    .sidebar:after, .sidebar::after {
+      display: none !important;
+      content: none !important;
+    }
     .sidebar .inside {
       display: flex !important;
-      align-items: center !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
       justify-content: center !important;
       width: 100% !important;
       height: 100% !important;
+      padding-left: 100px !important;
+      position: relative !important;
+      z-index: 10 !important;
+    }
+    .sidebar .engloba-sidebar {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: center !important;
+      width: 100% !important;
+      margin: auto 0 !important;
     }
     .sidebar .nav-sidebar {
       display: flex !important;
-      align-items: flex-end !important;
-      justify-content: center !important;
-      width: 100% !important;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      width: auto !important;
       padding: 0 !important;
       margin: 0 !important;
+      z-index: 10 !important;
     }
     .sidebar .nav-sidebar ul {
       display: flex !important;
       flex-direction: column !important;
-      align-items: flex-end !important;
-      text-align: right !important;
-      margin-right: 180px !important;
-      gap: 26px 0 !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      margin: 0 !important;
+      gap: 24px 0 !important;
       width: auto !important;
       padding: 0 !important;
     }
     .sidebar .nav-sidebar li {
       display: flex !important;
-      justify-content: flex-end !important;
-      align-self: flex-end !important;
-      text-align: right !important;
+      justify-content: flex-start !important;
+      align-self: flex-start !important;
+      text-align: left !important;
       width: auto !important;
       position: relative !important;
     }
@@ -344,36 +361,45 @@
       color: #FFFFFF !important;
       font-weight: 700 !important;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) !important;
-      text-align: right !important;
+      text-align: left !important;
       white-space: nowrap !important;
       display: inline-block !important;
-      font-size: 1.35rem !important;
+      font-size: 1.4rem !important;
+      transition: color 0.2s ease, transform 0.2s ease !important;
     }
     .sidebar .nav-sidebar li a:hover {
       color: #1A002C !important;
+      transform: translateX(6px) !important;
     }
     .sidebar .nav-sidebar li:after {
       background: rgba(255, 255, 255, 0.4) !important;
     }
     
-    /* Escadinha dos links (formato em arco acompanhando a mandala) */
-    .sidebar .nav-sidebar li:nth-of-type(1) { margin-right: 27px !important; }
-    .sidebar .nav-sidebar li:nth-of-type(2) { margin-right: 64px !important; }
-    .sidebar .nav-sidebar li:nth-of-type(3) { margin-right: 96px !important; }
-    .sidebar .nav-sidebar li:nth-of-type(4) { margin-right: 120px !important; }
-    .sidebar .nav-sidebar li:nth-of-type(5) { margin-right: 138px !important; }
-    .sidebar .nav-sidebar li:nth-of-type(6) { margin-right: 130px !important; }
-    .sidebar .nav-sidebar li:nth-of-type(7) { margin-right: 106px !important; }
-    .sidebar .nav-sidebar li:nth-of-type(8) { margin-right: 84px !important; }
+    /* Escadinha dos links à esquerda da arte */
+    .sidebar .nav-sidebar li:nth-of-type(1) { margin-left: 0px !important; margin-right: 0 !important; }
+    .sidebar .nav-sidebar li:nth-of-type(2) { margin-left: 35px !important; margin-right: 0 !important; }
+    .sidebar .nav-sidebar li:nth-of-type(3) { margin-left: 65px !important; margin-right: 0 !important; }
+    .sidebar .nav-sidebar li:nth-of-type(4) { margin-left: 90px !important; margin-right: 0 !important; }
+    .sidebar .nav-sidebar li:nth-of-type(5) { margin-left: 100px !important; margin-right: 0 !important; }
+    .sidebar .nav-sidebar li:nth-of-type(6) { margin-left: 85px !important; margin-right: 0 !important; }
+    .sidebar .nav-sidebar li:nth-of-type(7) { margin-left: 55px !important; margin-right: 0 !important; }
+    .sidebar .nav-sidebar li:nth-of-type(8) { margin-left: 20px !important; margin-right: 0 !important; }
 
     .sidebar--circle {
+      position: absolute !important;
+      right: 0 !important;
+      top: 50% !important;
+      bottom: auto !important;
+      transform: translateY(-50%) !important;
+      width: 320px !important;
+      height: 540px !important;
       background-image: url('assets/images/firula-sidebar.png') !important;
-      background-position: right bottom !important;
+      background-position: right center !important;
       background-repeat: no-repeat !important;
       background-size: contain !important;
       opacity: 0.35 !important;
       pointer-events: none !important;
-      max-width: 100% !important;
+      z-index: 1 !important;
     }
     /* Sidebar Social Media Circles */
     .sidebar .rede-sidebar {
@@ -2525,27 +2551,83 @@
       }
 
       /* Sidebar Escadinha no Mobile */
-      .sidebar .nav-sidebar {
-        padding-right: 28px !important;
-        margin-top: -20px !important;
+      .sidebar:after, .sidebar::after {
+        display: none !important;
+        content: none !important;
+      }
+      .sidebar .inside {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
         width: 100% !important;
+        height: 100% !important;
+        padding-left: 28px !important;
+        padding-right: 0 !important;
+        position: relative !important;
+        z-index: 10 !important;
+      }
+      .sidebar .engloba-sidebar {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: auto 0 !important;
+      }
+      .sidebar .nav-sidebar {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+        z-index: 10 !important;
       }
       .sidebar .nav-sidebar ul {
-        margin-right: 0 !important;
+        margin: 0 !important;
         gap: 18px 0 !important;
-        align-items: flex-end !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        width: 100% !important;
+      }
+      .sidebar .nav-sidebar li {
+        justify-content: flex-start !important;
+        align-self: flex-start !important;
+        text-align: left !important;
+        width: auto !important;
       }
       .sidebar .nav-sidebar li a {
-        font-size: 1.15rem !important;
+        font-size: 1.25rem !important;
+        text-align: left !important;
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important;
       }
-      .sidebar .nav-sidebar li:nth-of-type(1) { margin-right: 14px !important; }
-      .sidebar .nav-sidebar li:nth-of-type(2) { margin-right: 34px !important; }
-      .sidebar .nav-sidebar li:nth-of-type(3) { margin-right: 52px !important; }
-      .sidebar .nav-sidebar li:nth-of-type(4) { margin-right: 68px !important; }
-      .sidebar .nav-sidebar li:nth-of-type(5) { margin-right: 76px !important; }
-      .sidebar .nav-sidebar li:nth-of-type(6) { margin-right: 70px !important; }
-      .sidebar .nav-sidebar li:nth-of-type(7) { margin-right: 56px !important; }
-      .sidebar .nav-sidebar li:nth-of-type(8) { margin-right: 40px !important; }
+      .sidebar .nav-sidebar li:nth-of-type(1) { margin-left: 0px !important; margin-right: 0 !important; }
+      .sidebar .nav-sidebar li:nth-of-type(2) { margin-left: 20px !important; margin-right: 0 !important; }
+      .sidebar .nav-sidebar li:nth-of-type(3) { margin-left: 38px !important; margin-right: 0 !important; }
+      .sidebar .nav-sidebar li:nth-of-type(4) { margin-left: 54px !important; margin-right: 0 !important; }
+      .sidebar .nav-sidebar li:nth-of-type(5) { margin-left: 60px !important; margin-right: 0 !important; }
+      .sidebar .nav-sidebar li:nth-of-type(6) { margin-left: 52px !important; margin-right: 0 !important; }
+      .sidebar .nav-sidebar li:nth-of-type(7) { margin-left: 36px !important; margin-right: 0 !important; }
+      .sidebar .nav-sidebar li:nth-of-type(8) { margin-left: 16px !important; margin-right: 0 !important; }
+
+      .sidebar--circle {
+        position: absolute !important;
+        right: 0 !important;
+        top: 50% !important;
+        bottom: auto !important;
+        transform: translateY(-50%) !important;
+        width: 165px !important;
+        height: 480px !important;
+        background-image: url('assets/images/firula-sidebar.png') !important;
+        background-position: right center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        opacity: 0.35 !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+      }
     }
   </style>
 </head>
