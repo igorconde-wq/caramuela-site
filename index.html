@@ -839,21 +839,33 @@
     .oficinas__encompass {
       position: relative !important;
       z-index: 10 !important;
-      margin-bottom: 40px !important;
+      width: calc(100% - 40px) !important;
+      max-width: 820px !important;
+      margin: 0 auto 40px auto !important;
       text-align: center !important;
-      padding: 0 20px !important;
+      padding: 36px 38px !important;
+      background: rgba(18, 48, 8, 0.48) !important;
+      backdrop-filter: blur(10px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.28) !important;
+      border-radius: 18px !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
     }
     .oficinas__title {
       color: #FFFFFF !important;
       font-size: 2.8rem !important;
       font-weight: 800 !important;
       letter-spacing: 2px !important;
-      margin-bottom: 6px !important;
+      margin-bottom: 8px !important;
       text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35) !important;
     }
     .oficinas__subtitle p {
       color: #FEF08A !important;
-      font-size: 1.25rem !important;
+      font-size: 1.2rem !important;
       font-weight: 700 !important;
       letter-spacing: 1.5px !important;
       text-transform: uppercase !important;
@@ -861,13 +873,13 @@
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) !important;
     }
     .oficinas__paragraph p {
-      color: #FFFFFF !important;
-      font-size: 1.12rem !important;
+      color: #F1F8E9 !important;
+      font-size: 1.08rem !important;
       font-weight: 400 !important;
       line-height: 1.65 !important;
-      max-width: 820px !important;
+      max-width: 740px !important;
       margin: 0 auto !important;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) !important;
     }
     .oficinas__cards-wrap {
       width: 100% !important;
@@ -883,7 +895,7 @@
       padding: 0 20px !important;
     }
     .oficina-card {
-      background: rgba(18, 48, 8, 0.38) !important;
+      background: rgba(18, 48, 8, 0.45) !important;
       backdrop-filter: blur(10px) !important;
       border: 1px solid rgba(255, 255, 255, 0.28) !important;
       border-radius: 18px !important;
@@ -944,9 +956,16 @@
     }
     .oficinas__cta {
       margin-top: 25px !important;
+      width: 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+      text-align: center !important;
     }
     .oficinas__btn {
-      display: inline-block !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
       background: #FFFFFF !important;
       color: #365314 !important;
       font-weight: 800 !important;
@@ -2496,17 +2515,29 @@
       .bloco-section, .oficinas-section {
         padding: 65px 0 55px 0 !important;
       }
+      .oficinas__encompass {
+        width: calc(100% - 30px) !important;
+        max-width: 320px !important;
+        min-height: 336px !important;
+        margin: 0 auto 20px auto !important;
+        padding: 22px 18px !important;
+      }
       .bloco__title, .oficinas__title {
         font-size: 2.1rem !important;
       }
       .bloco__subtitle p, .oficinas__subtitle p {
         font-size: 0.95rem !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 10px !important;
       }
-      .bloco__paragraph p, .oficinas__paragraph p {
+      .bloco__paragraph p {
         font-size: 0.92rem !important;
         line-height: 1.5 !important;
         padding: 0 10px !important;
+      }
+      .oficinas__paragraph p {
+        font-size: 0.92rem !important;
+        line-height: 1.5 !important;
+        padding: 0 !important;
       }
       .bloco-cards-grid, .oficinas-cards-grid {
         gap: 20px !important;
