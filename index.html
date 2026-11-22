@@ -1795,15 +1795,39 @@
       box-shadow: none !important;
     }
 
-    /* Título 15 Anos e Subtítulo em Escadinha do Lado Esquerdo */
+    /* Título 15 Anos e Subtítulo Centralizados no Hero */
+    .bann__cnt {
+      justify-content: center !important;
+      background: linear-gradient(180deg, rgba(26,0,44,0.42) 0%, rgba(26,0,44,0.52) 50%, rgba(26,0,44,0.68) 100%) !important;
+      background-image: linear-gradient(180deg, rgba(26,0,44,0.42) 0%, rgba(26,0,44,0.52) 50%, rgba(26,0,44,0.68) 100%) !important;
+    }
+    .bann__txt {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+    }
+    .bann__description {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+    }
     .bann__title {
       font-size: 1.15rem !important;
       color: #FFFFFF !important;
       font-weight: 800 !important;
       letter-spacing: 0.18em !important;
       display: block !important;
-      margin-bottom: 12px !important;
-      text-align: left !important;
+      width: 100% !important;
+      margin: 0 auto 12px auto !important;
+      text-align: center !important;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
       filter: none !important;
     }
@@ -1814,30 +1838,41 @@
       line-height: 1.12 !important;
       display: flex !important;
       flex-direction: column !important;
-      align-items: flex-start !important;
-      text-align: left !important;
-      margin-bottom: 24px !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto 24px auto !important;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
       filter: none !important;
     }
-    .bann__subtitle .escadinha-item {
+    .bann__subtitle .escadinha-item,
+    .bann__subtitle .escadinha-1,
+    .bann__subtitle .escadinha-2,
+    .bann__subtitle .escadinha-3 {
       display: block !important;
       white-space: nowrap !important;
       letter-spacing: 0.03em !important;
-    }
-    .bann__subtitle .escadinha-1 {
       margin-left: 0 !important;
-    }
-    .bann__subtitle .escadinha-2 {
-      margin-left: 32px !important;
-    }
-    .bann__subtitle .escadinha-3 {
-      margin-left: 64px !important;
+      margin-right: 0 !important;
+      text-align: center !important;
     }
     .bann__btn-banner {
       display: flex !important;
-      justify-content: flex-start !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
       margin-top: 22px !important;
+    }
+    .bann__btn-banner a,
+    .bann__btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      margin: 0 auto !important;
     }
     
     /* Garantir que não haja duplicatas: bann__circle oculto e carrossel contido */
@@ -2072,26 +2107,28 @@
         z-index: 10 !important;
         display: flex !important;
         align-items: flex-end !important;
-        justify-content: flex-start !important;
+        justify-content: center !important;
         padding-top: 0 !important;
         padding-bottom: 35px !important;
       }
       .bann__txt {
         padding: 0 24px !important;
-        text-align: left !important;
+        text-align: center !important;
         width: 100% !important;
         max-width: 100% !important;
+        margin: 0 auto !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
+        align-items: center !important;
         justify-content: flex-end !important;
       }
       .bann__description {
         padding-bottom: 0 !important;
         height: auto !important;
         background: transparent !important;
-        text-align: left !important;
-        align-items: flex-start !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
@@ -2101,8 +2138,8 @@
         color: #FFFFFF !important;
         font-weight: 800 !important;
         letter-spacing: 0.12em !important;
-        text-align: left !important;
-        margin: 0 0 10px 0 !important;
+        text-align: center !important;
+        margin: 0 auto 10px auto !important;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
         display: block !important;
         width: 100% !important;
@@ -2114,41 +2151,47 @@
         line-height: 1.15 !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-        margin: 0 0 18px 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto 18px auto !important;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
         width: 100% !important;
+        max-width: 100% !important;
       }
-      .bann__subtitle .escadinha-item {
+      .bann__subtitle .escadinha-item,
+      .bann__subtitle .escadinha-1,
+      .bann__subtitle .escadinha-2,
+      .bann__subtitle .escadinha-3 {
         display: block !important;
         line-height: 1.15 !important;
         white-space: nowrap !important;
-      }
-      .bann__subtitle .escadinha-1 {
         margin-left: 0 !important;
-      }
-      .bann__subtitle .escadinha-2 {
-        margin-left: 20px !important;
-      }
-      .bann__subtitle .escadinha-3 {
-        margin-left: 40px !important;
+        margin-right: 0 !important;
+        text-align: center !important;
       }
       .bann__btn-banner {
-        text-align: left !important;
+        text-align: center !important;
         display: flex !important;
-        justify-content: flex-start !important;
+        align-items: center !important;
+        justify-content: center !important;
         margin-top: 6px !important;
         width: 100% !important;
       }
+      .bann__btn-banner a,
       .bann__btn {
         background: linear-gradient(135deg, #C04CFD 0%, #7B2CBF 100%) !important;
         color: #FFF !important;
         border: none !important;
         border-radius: 30px !important;
-        padding: 12px 28px !important;
+        padding: 12px 32px !important;
+        height: auto !important;
         box-shadow: 0 4px 15px rgba(192, 76, 253, 0.4) !important;
-        display: inline-block !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
       }
       .gain--home .gain__box {
         width: 48% !important;
